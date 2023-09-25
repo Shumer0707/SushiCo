@@ -1,0 +1,369 @@
+@import url(https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Montserrat:wght@300;400;600;700&display=swap);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/*Заголовки*/
+h1{
+    text-align: center;
+}
+/*цвет тела*/
+body {
+    --first_color: #34302f;
+    --second_color: #b5836b;
+    --third_color: #f6314a;
+    --fourth_color: #fdfdfd;
+    --fifth_color: #110d0e;
+    background: var(--first_color);
+}
+html {
+    scroll-behavior: smooth;
+}
+/*-------------------------------------------------------------------блок меню--------------------------------------------------------------------------------------------------------------------------*/
+.container_sticky{
+    display: flex;
+    background: var(--fifth_color);
+    position: sticky;
+    top: 0px;
+    height: 50px;
+    width: 100%;
+    z-index: 2;
+}
+.menu{
+    background: var(--fifth_color);
+    width: 100%;
+    height: auto;
+    margin:auto;
+}
+/*список блоков меню*/
+.menu_ul{
+    text-align: center;
+}
+/*каждый блок*/
+.menu_ul li{
+    display: inline;
+    background: var(--fifth_color);
+    color: var(--fourth_color);
+    padding: 5px 20px;
+    cursor:pointer;
+    border-radius: 5px;
+    border: var(--fourth_color) 2px solid;
+}
+
+/*где не делать*/
+.menu_ul li:not(:last-of-type){
+    margin-right: 0.5%;
+}
+.href{
+    position: absolute;
+    z-index: 1;
+    top:-20em;
+}
+.menu_ul li a {
+    color: var(--fourth_color);
+    text-decoration: none;
+}
+.menu_ul li a:hover{
+    cursor: pointer;
+    color: var(--third_color);
+}
+
+/*-------------------------------------------------------------------голова--------------------------------------------------------------------------------------------------------------------------*/
+#header{
+    width: 100%;
+    height: 100px;
+    background: var(--fifth_color);
+    color: var(--fourth_color);
+    display: flex;
+}
+.header_logo{
+    background: var(--fifth_color);
+    height: 80%;
+    width: 10%;
+    margin: 0px 2% 0px 10%;
+    line-height: 100px;
+    text-align: center;
+}
+.header_logo img{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+.header_phone{
+    background: var(--fifth_color);
+    height: 70%;
+    width: 29%;
+    display:block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.header_phone_nomer{
+    color: var(--fourth_color);
+    background: var(--fifth_color);
+    height: 60%;
+    width: 100%;
+    font-size: 150%;
+}
+.header_phone_nomer_text:hover{
+    color: var(--third_color);
+    cursor:pointer ;
+}
+.header_phone_nomer span{
+    margin-right: 40px;
+}
+.header_phone_dostavka{
+    background: var(--fifth_color);
+    height: 40%;
+    width: 100%;
+}
+.header_lang{
+    background: var(--fifth_color);
+    height: 100%;
+    width: 10%;
+    margin: 0px 2% 0px 29%;
+    line-height: 100px;
+    text-align: center;
+}
+/*-------------------------------------------------------------------промо видео----------------------------------------------------------------------------------------------------------------------*/
+#main{
+    position: relative;
+    width: 100%;
+    min-height:500px;
+    background: var(--first_color);
+    color: var(--fourth_color);
+    margin:0px 0% 20px 0%;
+}
+.scroller {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    scroll-snap-type: x mandatory;
+}
+.item{
+    background: var(--first_color);
+    height: 600px;
+    min-width: 100%;
+    scroll-snap-align: center;
+    margin-top: 50px;
+}
+.item img {
+    width: 100%;
+    height:100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+
+}
+/*-------------------------------------------------------------------кнопки-------*/
+.btn {
+    position: absolute;
+    top:250px;
+    height: 3em;
+    width: 3em;
+    border-radius: 3em;
+    background-color: var(--fifth_color);
+    z-index: 1;
+    line-height: 3em;
+    text-align: center;
+    color: var(--fourth_color);
+    font-weight: bold;
+    opacity: 0.5;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+}
+.btn:hover{
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 1px 1px 10px 10px #333;
+}
+.btn.next {
+    right: 15px;
+}
+.btn.prev {
+    left: 15px;
+}
+/*-------------------------------------------------------------------каталоги---------------------------------------------------------------------------------------------------------------------*/
+.Katalog_main{
+    position: relative;
+    width: 80%;
+    height:auto;
+    background: var(--first_color);
+    color: var(--fifth_color);
+    margin:20px 0% 20px 10%;
+    border-radius:20px;
+}
+.Katalog_main h2{
+    margin-bottom: 10px;
+}
+.Katalog_Skrol{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    scroll-snap-type: x mandatory;
+}
+/*-------------------------------------------------------------------кнопки коталога---------*/
+.btn_kotal{
+    position: absolute;
+    background-color: var(--fifth_color);
+    height: 3em;
+    width: 3em;
+    text-align: center;
+    border-radius: 3em;
+    line-height: 3em;
+    top: 10em;
+    opacity: 0.5;
+    box-shadow: 1px 1px 10px 10px var(--fifth_color);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+}
+.btn_kotal:hover{
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 1px 1px 10px 10px var(--fifth_color);
+}
+.btn_kotal.next{
+    float: right;
+    right: -4em;
+}
+.btn_kotal.prev{
+    float: left;
+    left: -4em;
+}
+
+/*-------------------------------------------------------------------каталог 1---------*/
+.Katalog{
+    height: auto;
+    min-width: 30%;
+    display: inline-block;
+    text-align: center;
+    background: var(--first_color);
+    float: left;
+    border-radius:20px;
+    scroll-snap-align: end;
+}
+.Katalog:not(:first-of-type){
+    margin-left:  5%;
+}
+/*-------------------------------------------------------------------каталог Verh---------*/
+.Katalog_Verh{
+    height: auto;
+    width: 100%;
+    display: inline-block;
+    background: var(--fifth_color);
+    float: left;
+    border-radius: 10px;
+}
+
+.Katalog_Verh img{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 10px;
+}
+/*-------------------------------------------------------------------каталог Center---------*/
+.Katalog_Center{
+    color: var(--fifth_color);
+    height: 60px;
+    width: 100%;
+    display: inline-block;
+    background: var(--first_color);
+    float: left;
+    line-height: 50px;
+    border-radius: 10px;
+}
+/*-------------------------------------------------------------------каталог Niz---------*/
+.Katalog_Niz{
+    height: 50px;
+    width: 100%;
+    display: inline-block;
+    background: var(--fifth_color);
+    color: var(--fourth_color);
+    float: left;
+    border-radius: 10px;
+    line-height: 50px;
+}
+/*-------------------------------------------------------------------info-----------------------------------------------------------------------------------------------------------------------*/
+.info_main{
+    width: 80%;
+    height: 1000px;
+    background: var(--first_color);
+    margin: auto;
+}
+.info{
+    float: left;
+    margin-top: 2%;
+    background: #a0aec0;
+    width: 49%;
+    height: 50%;
+    border-radius: 10px;
+    padding: 4% 4% 4% 4%;
+}
+.info_h{
+    display: block;
+    margin-top:50px;
+}
+.info h2{
+    text-align: center;
+}
+.info.left{
+    margin-right: 2%;
+}
+.info.right{
+
+}
+.info img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+/*-------------------------------------------------------------------Подвал-----------------------------------------------------------------------------------------------------------------------*/
+#footer{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    border-top: 3px var(--third_color) solid;
+    background: var(--fifth_color);
+    color: var(--fourth_color);
+    line-height: 50px;
+    margin-top: 50px;
+    float: left;
+}
+/*-------------------------------------------------------------------Popap-----------------------------------------------------------------------------------------------------------------------*/
+
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: 0.8;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.popup_body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+.popup_content{
+    background-color: #fff;
+    color: #333;
+    max-width: 800px;
+    padding: 30px;
+}
+.popup_close{}
+.popup_title{
+    font-size: 40px;
+    margin: 0px 0px 1em 0px
+}
+.popup_text{}
+
