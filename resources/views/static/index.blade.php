@@ -16,9 +16,9 @@
             <div class="item item3">
                 <img src="img\for-fluter\header-3.jpg" alt="3">
             </div>
+        <span class="btn prev">&lt;</span>
+        <span class="btn next">&gt;</span>
     </div>
-    <span class="btn prev">&lt;</span>
-    <span class="btn next">&gt;</span>
 </div>
 <!--Коталог Акция--------------------------------------------------------------------------------------------------------------------------------------------->
 <h1>Акция</h1>
@@ -49,7 +49,14 @@
             </h2>
         </div>
     </div>
-    <div class="info left"></div>
+    <div class="info left">
+        <div class="info_h">
+            <h2>О команде.
+                <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Architecto aspernatur autem culpa, cum doloribus ex inventore possimus quasi quis ullam!
+            </h2>
+        </div>
+    </div>
     <div class="info right"><img src="img\info\man-1.jpg" alt="1"></div>
 </div>
 <div id="footer">Футер</div>
