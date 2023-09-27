@@ -20,10 +20,10 @@
 </div>
 <!--блок меню-->
 <div class="container_sticky">
-    <div class="menu">
-        <ul class="menu_ul">
-            <li href="#sale"><a href="#Акция">Акция</a></li>
-            <li><a href="#Акция">Сеты</a></li>
+    <div class="header_menu">
+        <ul class="header_menu_ul">
+            <li><a href="/">Акция</a></li>
+            <li><a href="/menu">Сеты</a></li>
             <li><a href="#Акция">Нигири</a></li>
             <li><a href="#Акция">Гункан</a></li>
             <li><a href="#Акция">Хосомаки</a></li>
@@ -39,7 +39,9 @@
     </div>
 </div>
 @yield('content')
+<div id="footer">Футер</div>
 <script src="/js/home.js"></script>
+<script src="https://kit.fontawesome.com/ec45053718.js" crossorigin="anonymous"></script>
 </body>
 </html>
 

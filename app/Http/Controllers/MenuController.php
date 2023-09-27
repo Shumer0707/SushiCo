@@ -11,7 +11,7 @@ class MenuController extends Controller
     public function index()
     {
         $menu = Menu::all();
-        return view('static/index')->with('menu',$menu);
+        return view('dynamic/menu')->with('menu',$menu);
     }
 
 
