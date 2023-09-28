@@ -16,7 +16,11 @@
         </div>
         <div class="header_phone_dostavka">с 10:00 до 22:00 Доставка занимает в среднем 40 минут.</div>
     </div>
-    <div class="header_lang">Смена языка</div>
+    <div class="header_lang">
+        <a href="/"><button class="button home"><p>Главная</p></button></a>
+        <a href="contacti"><button class="button contacti"><p>Контакты</p></button></a>
+        <a href="bascet"><button class="button basket"><i class="fa-solid fa-basket-shopping"></i></button></a>
+    </div>
 </div>
 <!--блок меню-->
 <div class="container_sticky">

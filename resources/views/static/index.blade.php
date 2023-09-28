@@ -33,9 +33,16 @@
                     <img src="/img/menu/{{$el->img}}" alt="Акция" class="cover">
                 </div>
             </div>
-            <div class="Katalog_Center"></div>
+            <div class="Katalog_Center">
+                <p>{{$el->gram}}</p></br>
+                <p>{{$el->ingr_1}}</p><p>{{$el->ingr_2}}</p><p>{{$el->ingr_3}}</p><p>{{$el->ingr_4}}</p><p>{{$el->ingr_5}}</p>
+            </div>
             <div class="Katalog_Niz">
-                <h3>{{$el->price}}</h3>
+                <div class="Katalog_Niz_Container"><span>{{$el->price + ($el->price / 10)}}</span>{{$el->price}} MDL</div>
+                <div class="Katalog_Niz_Container">
+                    <a href="/basket"><button class="btn_basket">Добавить <i class="fa-solid fa-basket-shopping"></i></button></a>
+                </div>
+{{--                <h3>{{$el->price}} <button><i class="fa-solid fa-basket-shopping"></i></button></h3>--}}
             </div>
         </div>
         @endforeach
