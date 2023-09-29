@@ -8,7 +8,7 @@
 <body>
 <!--Шапка-->
 <div id="header">
-    <div class="header_logo"><img src="/img/Logo1.jpg" alt="Sushico Суши Логотип"></div>
+    <div class="header_logo"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>
     <div class="header_phone">
         <div class="header_phone_nomer">
             <span class="header_phone_nomer_text" href="" target="_blank">060000000</span>
@@ -18,8 +18,8 @@
     </div>
     <div class="header_lang">
         <a href="/"><button class="button home"><p>Главная</p></button></a>
-        <a href="contacti"><button class="button contacti"><p>Контакты</p></button></a>
-        <a href="bascet"><button class="button basket"><i class="fa-solid fa-basket-shopping"></i></button></a>
+        <a href="/contact"><button class="button contacti"><p>Контакты</p></button></a>
+        <a href="/basket"><button class="button basket"><i class="fa-solid fa-basket-shopping"></i></button></a>
     </div>
 </div>
 <!--блок меню-->
@@ -43,7 +43,34 @@
     </div>
 </div>
 @yield('content')
-<div id="footer">Футер</div>
+<div class="footer">
+    <div class="footer_promo">
+        <div class="footer_content"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>
+        <div class="footer_content"><img src="/img/kat_1.jpg" alt="Sushico Логотип"></div>
+        <div class="footer_content right">
+            <div class="container_flex">
+                <h2>STRADA ISMAIL 86, CHIȘINĂU</h2>
+                <h2>PROGRAM: 11:00 — 22:00</h2>
+                <h2>078 125 533</h2>
+                <h2>WWW.SUSHIKO.MD</h2>
+                <div class="social_icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.telegram.org" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_menu">
+        <nav>
+            <a href="'/'">Главнвя</a>
+            <a href="/contact">Контакты</a>
+            <a href="/agreement">Условия использования</a>
+        </nav>
+    </div>
+    <p>© 2023 sushico.md - Все права защищены</p>
+</div>
 <script src="/js/home.js"></script>
 <script src="https://kit.fontawesome.com/ec45053718.js" crossorigin="anonymous"></script>
 </body>
