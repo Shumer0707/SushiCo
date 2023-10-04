@@ -34,7 +34,7 @@ class PromoController extends Controller
 
     public function edit($id)
     {
-        //
+        return redirect('/static');
     }
 
 

@@ -9,7 +9,11 @@ Route::resource('/menu', 'MenuController');
 Route::resource('/contact', 'ContactController');
 Route::resource('/basket', 'BasketController');
 
+
 //Route::get('/home', function () {return view('static/home');});
 //Route::get('/post/{id}', function ($id) {return "ID: $id";});
+
+
+Route::get('/delete', 'DeleteController@index');
 
 

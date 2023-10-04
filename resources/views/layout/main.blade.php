@@ -64,7 +64,7 @@
     </div>
     <div class="footer_menu">
         <nav>
-            <a href="'/'">Главнвя</a>
+            <a href="/">Главнвя</a>
             <a href="/contact">Контакты</a>
             <a href="/agreement">Условия использования</a>
         </nav>

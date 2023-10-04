@@ -209,7 +209,7 @@ html {
     width: 85%;
     height:auto;
     background: var(--first_color);
-    color: var(--fifth_color);
+    color: var(--fourth_color);
     margin:20px 0% 20px 7.5%;
     border-radius:20px;
 }
@@ -252,7 +252,7 @@ html {
 
 /*-------------------------------------------------------------------каталог Промо---------*/
 .Katalog{
-    color: var(--fifth_color);
+    color: var(--fourth_color);
     height: auto;
     min-width: 28.333%;
     display: inline-block;

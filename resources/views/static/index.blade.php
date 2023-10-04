@@ -8,13 +8,13 @@
 <div id="main">
     <div class="scroller">
             <div class="item item1">
-                <img src="img\for-fluter\header-1.jpg" alt="1">
+                <img src="\img\for-fluter\header-1.jpg" alt="1">
             </div>
             <div class="item item2">
-                <img src="img\for-fluter\header-2.jpg" alt="2">
+                <img src="\img\for-fluter\header-2.jpg" alt="2">
             </div>
             <div class="item item3">
-                <img src="img\for-fluter\header-3.jpg" alt="3">
+                <img src="\img\for-fluter\header-3.jpg" alt="3">
             </div>
         <span class="btn prev">&lt;</span>
         <span class="btn next">&gt;</span>
@@ -22,6 +22,9 @@
 </div>
 <!---------------------------------------------------------Коталог Акция-------------------------------------------------------------------------------------->
 <h1>Лутшие цены на сеты, для вас и ваших друзей</h1>
+@if(isset($_SESSION['prod']))
+{{print_r($_SESSION['prod'])}}
+@endif
 <div class="Katalog_main one" >
     <a class="href" name="Акция"></a>
     <div class="Katalog_Skrol">
@@ -40,7 +43,7 @@
             <div class="Katalog_Niz">
                 <div class="Katalog_Niz_Container"><span>{{$el->price + ($el->price / 10)}}</span>{{$el->price}} MDL</div>
                 <div class="Katalog_Niz_Container">
-                    <a href="/basket"><button class="btn_basket">Добавить <i class="fa-solid fa-basket-shopping"></i></button></a>
+                    <a href="basket/{{$el->id}}/edit"><button class="btn_basket">Добавить <i class="fa-solid fa-basket-shopping"></i></button></a>
                 </div>
             </div>
         </div>
