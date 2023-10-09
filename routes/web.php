@@ -5,8 +5,12 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', 'StaticController@index');
 
 Route::resource('/', 'PromoController');
-Route::resource('/menu', 'MenuController');
+
+Route::get('/menu', 'MenuController@index');
+Route::get('/menu/{id}', 'MenuController@edit');
+
 Route::resource('/contact', 'ContactController');
+
 Route::resource('/basket', 'BasketController');
 
 

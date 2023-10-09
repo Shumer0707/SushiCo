@@ -5,6 +5,7 @@
 @endsection
 @section('content')
 <!-----------------------------------------------------------Промо------------------------------------------------------------------->
+<a href="/delete"><button class="btn_basket">Удалить все<i class="fa-solid fa-basket-shopping"></i></button></a>
 <div id="main">
     <div class="scroller">
             <div class="item item1">
@@ -22,9 +23,7 @@
 </div>
 <!---------------------------------------------------------Коталог Акция-------------------------------------------------------------------------------------->
 <h1>Лутшие цены на сеты, для вас и ваших друзей</h1>
-@if(isset($_SESSION['prod']))
-{{print_r($_SESSION['prod'])}}
-@endif
+
 <div class="Katalog_main one" >
     <a class="href" name="Акция"></a>
     <div class="Katalog_Skrol">
