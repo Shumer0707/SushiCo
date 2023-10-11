@@ -31,16 +31,16 @@ class BasketController extends Controller
     public function edit($id)
     {
         $_SESSION['prod'][$id] = ['id'=>$id];
-//        $_SESSION['count'][$id] = ['count'=>1];
+        $_SESSION['count'][$id] = ['count'=>1];
         return redirect('/');
     }
     public function AddToBasket(){
         if (isset($_SESSION['prod'])) {
             $basket=DB::table('menus')->whereIn('id', $_SESSION['prod'])->get();
-//            for($i = 0;$i <= count($basket);$i++){
-//                $basket[0][0] = 1;
-//            }
-            return $basket;
+            $collectionB = collect([]);
+            $concat = $collectionB -> concat([$basket[0], 'jora']);
+            $res = $concat -> all();
+            return $res;
         }
     }
 
