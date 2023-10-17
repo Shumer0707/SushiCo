@@ -6,8 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/', 'PromoController');
 
-Route::get('/menu', 'MenuController@index');
-Route::get('/menu/{id}', 'MenuController@edit');
+Route::get('/menu/{id}', 'MenuController@index');
+Route::get('/menu/show/{id}', 'MenuController@show');
+//Route::get('/menu/{id}', 'MenuController@edit');
 
 Route::resource('/contact', 'ContactController');
 

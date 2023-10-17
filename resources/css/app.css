@@ -284,9 +284,37 @@ html {
 .Katalog_menu h2{
     margin-bottom: 10px;
 }
+/*-------------------------------------------------------------------Show-----------------*/
+.Katalog_menu.show{
+    width: 70%;
+    height: 500px;
+    margin: 20px 0 20px 15%;
+}
+.Katalog_Verh.show{width: 50%; height: 100%;}
+.Katalog_Verh.show:hover{transform:none}
+.Katalog_Center.show{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.Katalog_Center.show p{margin-top: 20px; font-size: 120%; line-height: normal}
+.container_Katalog_Center{align-items: center; justify-content: center;}
+.Katalog_Niz.show{}
+.Katalog_Niz_Container.show{width: 100%; background: var(--first_color)}
+.btn_basket.show{width: 50%;float: left}
+.btn_basket.show.beck{background: var(--fifth_color);color: var(--fourth_color);}
+.btn_basket.show.beck:hover{
+    transform: translateX(10px) scale(1.02);
+    color: var(--fifth_color);
+    background: var(--fourth_color);
+}
 /*-------------------------------------------------------------------каталог Verh---------*/
 .Katalog_Verh{
-    height: auto;
+    height: 250px;
     width: 100%;
     display: inline-block;
     background: var(--first_color);
@@ -355,7 +383,7 @@ html {
     font-size: medium;
     font-weight: bold;
     background: var(--fourth_color);
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     cursor: pointer;
 }
 .btn_basket i{
@@ -500,8 +528,30 @@ html {
     float: left;
     width: 17.5%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+.basket_count{
+    display: block;
+    background: var(--text_color);
+    width: 50%;
+    height: 40px;
+}
+.basket_count_btn{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: var(--fourth_color);
+    float: left;
+    line-height: 30px;
+}
+/*.basket_count_btn minus{*/
+/*    float: right;*/
+/*}*/
+.basket_count_btn.plus{
+    float: right;
+}
 /*-------------------------------------------------------------------Подвал-----------------------------------------------------------------------------------------------------------------------*/
 .footer{
     margin-top: 100px;

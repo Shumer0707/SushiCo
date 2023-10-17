@@ -26,14 +26,14 @@
 <div class="container_sticky">
     <div class="header_menu">
         <ul class="header_menu_ul">
-            <li><a href="/">Акция</a></li>
-            <li><a href="/menu">Сеты</a></li>
+            <li><a href="/menu/Акция">Акция</a></li>
+            <li><a href="/menu/set">Сеты</a></li>
             <li><a href="#Акция">Нигири</a></li>
             <li><a href="#Акция">Гункан</a></li>
             <li><a href="#Акция">Хосомаки</a></li>
             <li><a href="#Акция">Уромаки</a></li>
             <li><a href="#Акция">Темпура</a></li>
-            <li><a href="#Акция">Сашими</a></li>
+            <li><a href="/menu/Sashimi">Сашими</a></li>
             <li><a href="#Акция">Суномон</a></li>
             <li><a href="#Акция">Лапша</a></li>
             <li><a href="#Акция">Рис</a></li>

@@ -25,18 +25,18 @@
 <h1>Лутшие цены на сеты, для вас и ваших друзей</h1>
 
 <div class="Katalog_main one" >
-    <a class="href" name="Акция"></a>
+
     <div class="Katalog_Skrol">
         @foreach($menu as $el)
         <div class="Katalog">
             <h2>{{$el->title}}</h2>
             <div class="Katalog_Verh">
                 <div class="photo">
-                    <img src="/img/menu/{{$el->img}}" alt="Акция" class="cover">
+                    <a href="menu/show/{{$el->id}}"><img src="/img/menu/{{$el->img}}" alt="Акция" class="cover"></a>
                 </div>
             </div>
             <div class="Katalog_Center">
-                <p>{{$el->gram}}</p></br>
+                <p>{{$el->gram}}</p>
                 <p>{{$el->ingr_1}}</p><p>{{$el->ingr_2}}</p><p>{{$el->ingr_3}}</p><p>{{$el->ingr_4}}</p><p>{{$el->ingr_5}}</p>
             </div>
             <div class="Katalog_Niz">
@@ -62,7 +62,7 @@
             </h2>
         </div>
     </div>
-    <div class="info left">
+    <div class="info left" id="Акция">
         <div class="info_h">
             <h2>О команде.
                 <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit.

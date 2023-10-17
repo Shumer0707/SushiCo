@@ -37,10 +37,10 @@ class BasketController extends Controller
     public function AddToBasket(){
         if (isset($_SESSION['prod'])) {
             $basket=DB::table('menus')->whereIn('id', $_SESSION['prod'])->get();
-            $collectionB = collect([]);
-            $concat = $collectionB -> concat([$basket[0], 'jora']);
-            $res = $concat -> all();
-            return $res;
+//            $collectionB = collect($basket);
+//            $collectionA = $collectionB[0] -> concat(['aaa' => 'jora']);
+//            $res = $concat -> all();
+            return $basket;
         }
     }
 
