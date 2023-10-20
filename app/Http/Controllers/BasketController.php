@@ -22,6 +22,9 @@ class BasketController extends Controller
     public function store(Request $request)
     {
 
+        $_SESSION['prod'][$request['id']] = ['id'=>$request['id']];
+        $_SESSION['count'][$request['id']] = ['count'=>1];
+        return redirect('/');
     }
 
     public function show($id)

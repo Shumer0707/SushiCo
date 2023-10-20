@@ -22,14 +22,15 @@
     </div>
 </div>
 <!---------------------------------------------------------Коталог Акция-------------------------------------------------------------------------------------->
+<div id="Акция"></div>
 <h1>Лутшие цены на сеты, для вас и ваших друзей</h1>
-
-<div class="Katalog_main one" >
-
+<div class="Katalog_main one" id="Акция">
     <div class="Katalog_Skrol">
         @foreach($menu as $el)
         <div class="Katalog">
+            <div class="Katalog_h2">
             <h2>{{$el->title}}</h2>
+            </div>
             <div class="Katalog_Verh">
                 <div class="photo">
                     <a href="menu/show/{{$el->id}}"><img src="/img/menu/{{$el->img}}" alt="Акция" class="cover"></a>
@@ -62,7 +63,7 @@
             </h2>
         </div>
     </div>
-    <div class="info left" id="Акция">
+    <div class="info left" >
         <div class="info_h">
             <h2>О команде.
                 <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit.

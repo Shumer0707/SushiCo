@@ -9,11 +9,10 @@ use Illuminate\Support\Facades\DB;
 class MenuController extends Controller
 {
 
-    public function index($id='')
+    public function index($category='')
     {
-        $category = [$id];
-        $menu=DB::table('menus')->whereIn('category', $category)->get();
-        return view('dynamic/menu')->with('menu',$menu)->with('category',$id);
+        $menu=DB::table('menus')->where('category', $category)->get();
+        return view('dynamic/menu')->with('menu',$menu)->with('category',$category);
     }
 
 
