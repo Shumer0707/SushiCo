@@ -55,3 +55,5 @@ function KotlogBatton(x){
 KotlogBatton(katalog_main_one);
 KotlogBatton(katalog_main_two);
 KotlogBatton(katalog_main_three);
+
+
