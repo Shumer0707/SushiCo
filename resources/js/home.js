@@ -29,31 +29,31 @@ function scrollToPrevItem() {
 }
 
 //-----------------------------------------Кнопка в каталоге---------------------------------------------------------------------------------------------------------------
-const katalog_main_one = '.Katalog_main.one';
-const katalog_main_two = '.Katalog_main.two';
-const katalog_main_three = '.Katalog_main.three';
-function KotlogBatton(x){
-      const katalog_main = document.querySelector(x);
+// const katalog_main_one = '.Katalog_main.one';
+// const katalog_main_two = '.Katalog_main.two';
+// const katalog_main_three = '.Katalog_main.three';
+function KotlogBatton(){
+      const katalog_main = document.querySelector('.Katalog_main');
       const katalog_skrol = katalog_main.querySelector('.Katalog_Skrol');
       const nextBtn_kotal = katalog_main.querySelector('.btn_kotal.next');
       const prevBtn_kotal = katalog_main.querySelector('.btn_kotal.prev');
-      const katalog_1Width = katalog_main.querySelector('.Katalog').clientWidth;
+      const katalog_1Width = katalog_main.querySelector('.Katalog').offsetWidth;
 
       nextBtn_kotal.addEventListener('click', scrollToNextKatalog);
       prevBtn_kotal.addEventListener('click', scrollToPrevKatalog);
       function scrollToNextKatalog(){
       katalog_skrol.scrollBy({left:katalog_1Width,top:0,behavior:'smooth'});
-      console.log(x);
+      // console.log(x);
       }
       function scrollToPrevKatalog(){
       katalog_skrol.scrollBy({left:-katalog_1Width,top:0,behavior:'smooth'});
-      console.log(x);
+      // console.log(x);
       }
-      console.log(x);
+      console.log(katalog_1Width);
 }
 
-KotlogBatton(katalog_main_one);
-KotlogBatton(katalog_main_two);
-KotlogBatton(katalog_main_three);
+KotlogBatton();
+// KotlogBatton(katalog_main_two);
+// KotlogBatton(katalog_main_three);
 
 
