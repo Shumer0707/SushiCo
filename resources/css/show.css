@@ -1,0 +1,48 @@
+
+.Katalog_menu.show{
+    width: 80%;
+    height: 100%;
+    margin: 20px 0 20px 10%;
+}
+.Katalog_h2.show{height: 5%}
+.Katalog_Verh.show{
+    width: 50%; 
+    height: 80%; 
+    margin-bottom: 5%;
+    display: block;
+    float: left;
+}
+.Katalog_Verh.show:hover{transform:none}
+.Katalog_Center.show{
+    width: 50%;
+    height: 80%;
+    margin: 0;
+    padding: 5%;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    display: flex;
+}
+.Katalog_Center.show p{margin-top: 20px; font-size: 120%; line-height: normal}
+.container_Katalog_Center{align-items: center; justify-content: center;}
+.Katalog_Niz.show{
+    height: 10%;
+    margin-bottom: 0;
+}
+.Katalog_Niz_Container.show{width: 100%; background: var(--first_color)}
+.btn_basket.show{width: 35%;float: left}
+.btn_basket.show.beck{background: var(--fifth_color);color: var(--fourth_color);}
+.price.show{
+    width: 30%; 
+    height: 60px; 
+    background: var(--first_color); 
+    color: var(--text_color_2);
+    float: left;
+    line-height: 60px;
+    font-size: 125%;
+}
+.btn_basket.show.beck:hover{
+    transform: translateX(10px) scale(1.02);
+    color: var(--fifth_color);
+    background: var(--fourth_color);
+}

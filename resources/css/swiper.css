@@ -1,0 +1,18 @@
+.mySwiper{
+
+}
+.swiper-wrapper{
+    
+}
+/* .swiper-slide{
+    width: auto !important;
+}
+.img-slider{
+    width: auto !important;
+} */
+.swiper-button-next {
+    right: -6% !important;
+}
+.swiper-button-prev {
+    left: -6% !important;
+}

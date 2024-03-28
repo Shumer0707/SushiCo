@@ -1,0 +1,55 @@
+
+.info.cont{
+    height: 100%;
+}
+.info iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    filter: grayscale(100%) brightness(70%);
+    transition: all 2s ease;
+}
+.info iframe:hover{
+    filter: none;
+}
+.contact{
+    margin-top: 10%;
+}
+
+ .contact h2, h1{
+    color: var(--text_color);
+    padding: 2% 2% 2% 2%;
+}
+/*-------------------------------------------------------------------Соцсети----------------------------------------------*/
+.social_icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social_icons a {
+    margin: 2% 2%;
+}
+
+.fa-brands{
+    font-size: 500%;
+    background: var(--first_color);
+    color: var(--text_color);
+    transition: all 0.5s ease;
+}
+.fa-brands:hover{
+    transform: scale(1.05) translateY(-5px);
+}
+.fa-brands.fa-square-facebook:hover{
+    color: #4867a9;
+}
+.fa-brands.fa-x-twitter:hover{
+    color: #34302f;
+    background: #acacac;
+}
+.fa-brands.fa-telegram:hover{
+    color: #00abec;
+}
+.fa-brands.fa-youtube:hover{
+    color: #ba0101;
+}
