@@ -29,7 +29,7 @@
         <!--блок меню-->
         <div class="header_menu_sticky">
             <div class="header_menu_container">
-                <div class="header_menu_logo"></div>
+                <div class="header_menu_logo"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>
                 <div class="header_menu">
                     <div class="header_menu_icon">
                         <span></span>
@@ -70,6 +70,7 @@
         <main class="main">
             @yield('content')
         </main>
+        <a href="#header" class="up_a" id="up_a"><div class="up_button" id="up_button" onscroll="myFunk()"><i class="fa-solid fa-arrow-up"></i></div></a>
         <footer class="footer">
             <div class="footer_promo">
                 <div class="footer_content"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>

@@ -1,3 +1,4 @@
+var min_width = 1000;
 const isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
@@ -32,6 +33,17 @@ if(isMobile.any()){
 }
 var header_menu_body = document.querySelector(".header_menu_body");
 const header_steaky = document.querySelector(".header_menu_sticky");
+
+if(header_steaky ){
+    window.addEventListener("resize", function(e) {
+        position_y = header_steaky.getBoundingClientRect();
+        if(window.innerWidth > min_width){
+            header_menu_body.style.paddingTop = 0 +'px';
+        }else
+            header_menu_body.style.paddingTop = position_y.y + 100 +'px';
+    })
+}
+
 const menuBody = document.querySelector('.header_menu_body');
 const iconMenu = document.querySelector('.header_menu_icon');
 if(iconMenu){
@@ -55,9 +67,7 @@ if(linkMenu){
 // if(menuBody){
 //     document.addEventListener("DOMContentLoaded", function () {
 //         window.addEventListener("scroll", function () {
-//             position_y = header_steaky.getBoundingClientRect();
-//             header_menu_body.style.paddingTop = position_y.y + 'px';
-//             console.log(position_y.y);
+//             console.log(window.innerWidth);
 //         });
 
 //     });

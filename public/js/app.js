@@ -2178,16 +2178,19 @@ __webpack_require__(/*! ./basket_up */ "./resources/js/basket_up.js");
 
 // const { constant } = require("lodash");
 var backToTop = document.querySelector(".up_button");
+var header_menu_logo = document.querySelector(".header_menu_logo");
 if (backToTop) {
   document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
       // var scroll = window.scrollY;
-      if (window.scrollY > 300) {
+      if (window.scrollY > 150) {
         // backToTop.style.display = "flex";
         backToTop.classList.add("_active-up");
+        header_menu_logo.classList.add("_active-up");
       } else {
         // backToTop.style.display = "none";
         backToTop.classList.remove("_active-up");
+        header_menu_logo.classList.remove("_active-up");
       }
     });
     // Плавная прокрутка при клике на кнопку
@@ -2242,6 +2245,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   \********************************/
 /***/ (() => {
 
+var min_width = 1000;
 var isMobile = {
   Android: function Android() {
     return navigator.userAgent.match(/Android/i);
@@ -2271,6 +2275,14 @@ if (isMobile.any()) {
 }
 var header_menu_body = document.querySelector(".header_menu_body");
 var header_steaky = document.querySelector(".header_menu_sticky");
+if (header_steaky) {
+  window.addEventListener("resize", function (e) {
+    position_y = header_steaky.getBoundingClientRect();
+    if (window.innerWidth > min_width) {
+      header_menu_body.style.paddingTop = 0 + 'px';
+    } else header_menu_body.style.paddingTop = position_y.y + 100 + 'px';
+  });
+}
 var menuBody = document.querySelector('.header_menu_body');
 var iconMenu = document.querySelector('.header_menu_icon');
 if (iconMenu) {
@@ -2294,9 +2306,7 @@ if (linkMenu) {
 // if(menuBody){
 //     document.addEventListener("DOMContentLoaded", function () {
 //         window.addEventListener("scroll", function () {
-//             position_y = header_steaky.getBoundingClientRect();
-//             header_menu_body.style.paddingTop = position_y.y + 'px';
-//             console.log(position_y.y);
+//             console.log(window.innerWidth);
 //         });
 
 //     });

@@ -90,7 +90,6 @@
     </div>
     <div class="info right"><img src="img\info\man-1.jpg" alt="1"></div>
 </div>
-<a href="#header" class="up_a" id="up_a"><div class="up_button" id="up_button" onscroll="myFunk()"><i class="fa-solid fa-arrow-up"></i></div></a>
 @endsection
 
 
