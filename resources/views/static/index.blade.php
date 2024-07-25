@@ -72,7 +72,7 @@
 </div>
 <div class="info_main">
     <div class="info left"><img src="img\info\rolli-1.jpg" alt="1"></div>
-    <div class="info right">
+    <div class="info right text">
         <div class="info_h">
             <h2>Изысканные роллы.
             <br/>Приготовленные из продуктов высочайшего качества.
@@ -80,7 +80,8 @@
             </h2>
         </div>
     </div>
-    <div class="info left" >
+    <div class="info right"><img src="img\info\man-1.jpg" alt="1"></div>
+    <div class="info left text" >
         <div class="info_h">
             <h2>О команде.
                 <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -88,7 +89,7 @@
             </h2>
         </div>
     </div>
-    <div class="info right"><img src="img\info\man-1.jpg" alt="1"></div>
+    
 </div>
 @endsection
 

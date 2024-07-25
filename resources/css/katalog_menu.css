@@ -1,0 +1,26 @@
+/*-------------------------------------------------------------------каталог Меню---------*/
+.Katalog_menu{
+    width: 20%;
+    height: 550px;
+    color: var(--text_color_3);
+    margin: 20px 0 20px 4%;
+    float: left;
+    text-align: center;
+}
+@media (max-width: 1000px){
+    .Katalog_menu{
+        width: 30%;
+        margin-left: 2.5%;
+    }
+}
+@media (max-width: 740px){
+    .Katalog_menu{
+        width: 45.5%;
+        margin-left: 3%;
+    }
+}
+@media (max-width: 450px){
+    .Katalog_menu{
+        width: 94%;
+    }
+}

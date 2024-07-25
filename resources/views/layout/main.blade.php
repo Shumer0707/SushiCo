@@ -36,18 +36,18 @@
                     </div>
                     <nav class="header_menu_body" id="header_menu_body">
                         <ul class="header_menu_list">
-                            <li><a href="/menu/set">Сеты</a></li>
-                            <li><a href="/menu/set">Нигири</a></li>
-                            <li><a href="/menu/set">Гункан</a></li>
-                            <li><a href="/menu/set">Хосомаки</a></li>
-                            <li><a href="/menu/set">Уромаки</a></li>
-                            <li><a href="/menu/set">Темпура</a></li>
-                            <li><a href="/menu/set">Сашими</a></li>
-                            <li><a href="/menu/set">Суномон</a></li>
-                            <li><a href="/menu/set">Лапша</a></li>
-                            <li><a href="/menu/set">Рис</a></li>
-                            <li><a href="/menu/set">Супы</a></li>
-                            <li><a href="/menu/set">Напити</a></li>
+                            <a href="/menu/set"><li>Сеты</li></a>
+                            <a href="/menu/set"><li>Нигири</li></a>
+                            <a href="/menu/set"><li>Гункан</li></a>
+                            <a href="/menu/set"><li>Хосомаки</li></a>
+                            <a href="/menu/set"><li>Уромаки</li></a>
+                            <a href="/menu/set"><li>Темпура</li></a>
+                            <a href="/menu/set"><li>Сашими</li></a>
+                            <a href="/menu/set"><li>Суномон</li></a>
+                            <a href="/menu/set"><li>Лапша</li></a>
+                            <a href="/menu/set"><li>Рис</li></a>
+                            <a href="/menu/set"><li>Супы</li></a>
+                            <a href="/menu/set"><li>Напити</li></a>
                         </ul>
                     </nav>
                 </div>
@@ -73,8 +73,8 @@
         <a href="#header" class="up_a" id="up_a"><div class="up_button" id="up_button" onscroll="myFunk()"><i class="fa-solid fa-arrow-up"></i></div></a>
         <footer class="footer">
             <div class="footer_promo">
-                <div class="footer_content"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>
-                <div class="footer_content"><img src="/img/kat_1.jpg" alt="Sushico Логотип"></div>
+                <div class="footer_content left"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>
+                <div class="footer_content centr"><img src="/img/kat_1.jpg" alt="Sushico Логотип"></div>
                 <div class="footer_content right">
                     <div class="container_flex">
                         <h2>STRADA ISMAIL 86, CHIȘINĂU</h2>

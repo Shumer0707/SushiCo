@@ -1,3 +1,4 @@
+/*-------------------------------------------------------------------каталог Меню---------*/
 
 .Katalog_menu.show{
     width: 80%;
@@ -7,15 +8,14 @@
 .Katalog_h2.show{height: 5%}
 .Katalog_Verh.show{
     width: 50%; 
-    height: 80%; 
+    height: 400px; 
     margin-bottom: 5%;
-    display: block;
     float: left;
 }
 .Katalog_Verh.show:hover{transform:none}
 .Katalog_Center.show{
     width: 50%;
-    height: 80%;
+    height: 400px;
     margin: 0;
     padding: 5%;
     align-items: center;
@@ -23,15 +23,31 @@
     float: left;
     display: flex;
 }
-.Katalog_Center.show p{margin-top: 20px; font-size: 120%; line-height: normal}
-.container_Katalog_Center{align-items: center; justify-content: center;}
+.Katalog_Center.show p{
+    margin-top: 20px; 
+    font-size: 120%; 
+    line-height: normal
+}
+.container_Katalog_Center{
+    align-items: center; 
+    justify-content: center;
+}
 .Katalog_Niz.show{
     height: 10%;
     margin-bottom: 0;
 }
-.Katalog_Niz_Container.show{width: 100%; background: var(--first_color)}
-.btn_basket.show{width: 35%;float: left}
-.btn_basket.show.beck{background: var(--fifth_color);color: var(--fourth_color);}
+.Katalog_Niz_Container.show{
+    width: 100%; 
+    background: var(--first_color)
+}
+.btn_basket.show{
+    width: 35%;
+    float: left
+}
+.btn_basket.show.beck{
+    background: var(--fifth_color);
+    color: var(--fourth_color);
+}
 .price.show{
     width: 30%; 
     height: 60px; 
@@ -46,3 +62,24 @@
     color: var(--fifth_color);
     background: var(--fourth_color);
 }
+@media (max-width: 1000px){
+    .Katalog_Verh.show{
+        height: 350px;
+    }
+    .Katalog_Center.show{
+        height: 350px;
+    }
+}
+@media (max-width: 740px){
+    .Katalog_Verh.show{
+        height: 250px;
+    }
+    .Katalog_Center.show{
+        height: 250px;
+    }
+    .Katalog_Center.show p{
+        font-size: 100%; 
+        line-height: normal
+    }
+}
+@media (max-width: 450px){}
