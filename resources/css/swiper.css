@@ -12,7 +12,9 @@
 } */
 .swiper-button-next {
     right: -6% !important;
+    z-index: 2 !important;
 }
 .swiper-button-prev {
     left: -6% !important;
+    z-index: 2 !important;
 }

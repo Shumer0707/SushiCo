@@ -9,6 +9,6 @@ class ContactController extends Controller
 
     public function index()
     {
-        return view('dynamic/contact');
+        return view('static.contact');
     }
 }

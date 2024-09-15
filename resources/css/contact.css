@@ -1,6 +1,6 @@
 
 .info.cont{
-    height: 100%;
+    margin-bottom: 2%;
 }
 .info iframe{
     width: 100%;
@@ -14,7 +14,7 @@
     filter: none;
 }
 .contact{
-    margin-top: 10%;
+    margin: 10% 0 10% 0;
 }
 
  .contact h2, h1{
@@ -32,7 +32,7 @@
 }
 
 .fa-brands{
-    font-size: 500%;
+    font-size: 300%;
     background: var(--first_color);
     color: var(--text_color);
     transition: all 0.5s ease;
@@ -53,3 +53,15 @@
 .fa-brands.fa-youtube:hover{
     color: #ba0101;
 }
+
+@media (max-width: 1000px){
+    .info.right.cont{
+        height: auto;
+        margin-top: 0;
+    }
+    .contact{
+        margin: 0 ;
+    }
+}
+@media (max-width: 740px){}
+@media (max-width: 450px){}

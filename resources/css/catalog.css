@@ -1,0 +1,133 @@
+.Catalog_main{
+    position: relative;
+    width: 100%;
+    height:auto;
+    /* background: var(--first_color); */
+    color: var(--fourth_color);
+    /* margin:20px 7.5% 20px 7.5%; */
+    border-radius:20px;
+    /* -webkit-box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3); */
+}
+.Catalog{
+    color: var(--text_color);
+    height: 400px;
+    /* min-width: 28.333%; */
+    /* display: inline-block; */
+    text-align: center;
+    /* background: var(--first_color); */
+    /* float: left; */
+    /* border-radius:10px; */
+    /* scroll-snap-align: end; */
+    margin: 0 2.5% 0 2.5%;
+}
+.Catalog_h2{
+    /* margin-top: 2.5%;
+    margin-bottom: 2.5%; */
+    margin:  2.5% 0 2.5% 0;
+    height: 7.5%;
+}
+/*.Catalog:not(:first-of-type){*/
+/*    margin-left:  5%;*/
+/*}*/
+
+/*-------------------------------------------------------------------каталог Verh---------*/
+.Catalog_Verh{
+    height: 45%;
+    width: 100%;
+    margin-bottom: 5%;
+    background: var(--first_color);
+    border-radius: 10px;
+    transition: all 0.7s ease;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+
+}
+.photo{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.Catalog_Verh img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.Catalog_Verh:hover{
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3);
+}
+/*-------------------------------------------------------------------каталог Center---------*/
+.Catalog_Center{
+    margin-bottom: 5%;
+    height: 22.5%;
+    width: 100%;
+    /* background: var(--first_color); */
+    /* line-height: 15px; */
+    border-radius: 10px;
+    overflow: hidden;
+}
+.Catalog_Center p{
+    text-align: left;
+    margin-top: 10px;
+    font-style: italic;
+    /* font-weight: bold; */
+}
+/*-------------------------------------------------------------------каталог Niz---------*/
+.Catalog_Niz{
+    height: 10%;
+    width: 100%;
+    float: left;
+    background: var(--fifth_color);
+    color: var(--text_color);
+    border-radius: 10px;
+    /* line-height: 50px; */
+    margin-bottom: 5%;
+}
+.Catalog_Niz_Container{
+    display: flex;
+    float: left;
+    width: 50%;
+    height: 100%;
+    color: var(--third_color);
+    font-weight: bold;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+}
+.Catalog_Niz_right{
+    float: left;
+    width: 50%;
+    height: 100%;
+    color: var(--third_color);
+    font-weight: bold;
+    font-size: large;
+}
+.Catalog_Niz_Container span{
+    color: var(--text_color);
+    text-decoration: line-through;
+    text-decoration-color: red;
+    margin-right: 10px;
+    
+}
+.btn_basket{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: bold;
+    background: var(--fourth_color);
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+.btn_basket i{
+    font-size: large;
+}
+.btn_basket:hover{
+    /* transform: translateX(-20px) scale(1.02); */
+    color: var(--fourth_color);
+    background: var(--fifth_color);
+}

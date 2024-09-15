@@ -11,7 +11,6 @@
 <body>
     <div class="wrapper" id="wrapper">
         <header class="header" id="header">
-            {{-- <div class="header_container"> --}}
             <div class="header_logo"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>
             <div class="header_phone">
                 <div class="header_phone_nomer">
@@ -21,7 +20,18 @@
                 <div class="header_phone_dostavka">с 10:00 до 22:00 Доставка занимает в среднем 40 минут.</div>
             </div>
             <div class="header_lang">
-                <a href="{{route('basket.index')}}"><button class="button basket"><i class="fa-solid fa-basket-shopping"></i></button></a>
+                <a href="{{route('basket.index')}}">
+                    <button class="button basket">
+                    <div class="icon_container"><i class="fa-solid fa-basket-shopping"></i></div>
+                        <div id="all_price_wrapper" class="all_price_wrapper">
+                            @if(isset($_SESSION['count'], $_SESSION['all_price']))
+                                <span class="all_price">{{$_SESSION['all_price']}}.0 MDL</span>
+                            @else
+                                <span class="all_price">00.0 MDL</span>
+                            @endif
+                        </div>
+                    </button>   
+                </a>
                 <a href="{{route('contact.index')}}"><button class="button contacti"><p>Контакты</p></button></a>
                 <a href="{{route('promo.index')}}"><button class="button home"><p>Главная</p></button></a>
             </div>
@@ -51,26 +61,13 @@
                         </ul>
                     </nav>
                 </div>
-
-                    {{-- <a href="/#Акция"><button class="button_menu">Акция</button></a>
-                    <a href="/menu/set"><button class="button_menu">Сеты</button></a>
-                    <a href="#Акция"><button class="button_menu">Нигири</button></a>
-                    <a href="#Акция"><button class="button_menu">Гункан</button></a>
-                    <a href="#Акция"><button class="button_menu">Хосомаки</button></a>
-                    <a href="#Акция"><button class="button_menu">Уромаки</button></a>
-                    <a href="#Акция"><button class="button_menu">Темпура</button></a>
-                    <a href="/menu/Sashimi"><button class="button_menu">Сашими</button></a>
-                    <a href="#Акция"><button class="button_menu">Суномон</button></a>
-                    <a href="#Акция"><button class="button_menu">Лапша</button></a>
-                    <a href="#Акция"><button class="button_menu">Рис</button></a>
-                    <a href="#Акция"><button class="button_menu">Супы</button></a>
-                    <a href="#Акция"><button class="button_menu">Напити</button></a> --}}
             </div>
         </div>
         <main class="main">
             @yield('content')
         </main>
-        <a href="#header" class="up_a" id="up_a"><div class="up_button" id="up_button" onscroll="myFunk()"><i class="fa-solid fa-arrow-up"></i></div></a>
+        @include('section.mini_basket')
+        <div id="block" class="block display_none"></div>
         <footer class="footer">
             <div class="footer_promo">
                 <div class="footer_content left"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>
@@ -99,9 +96,18 @@
             </div>
             <p>© 2023 sushico.md - Все права защищены</p>
         </footer>
+        <div id="all_style">
+            @isset($_SESSION['count'])
+                <style>
+                    .icon_container .fa-solid::after, .mini_basket_batton_icon .fa-solid::after{
+                        content:"{{$_SESSION['count']}}";
+                    }
+                </style>
+            @endisset
+        </div>
     </div>
-<script src="/js/app.js"></script>
-<script src="https://kit.fontawesome.com/ec45053718.js" crossorigin="anonymous"></script>
+    <script async src="/js/app.js"></script>
+    <script src="https://kit.fontawesome.com/ec45053718.js" crossorigin="anonymous"></script>
 </body>
 </html>
 

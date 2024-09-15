@@ -9,10 +9,12 @@
     border: 0;
     box-sizing: border-box;
 }
-h1{
-    margin-top: 10px;
+h1, h2{
     text-align: center;
 } 
+i{
+    pointer-events: none;
+}
 html,
 body {
     scroll-behavior: smooth;
@@ -24,14 +26,17 @@ body {
     --third_color: #f6314a;
     --fourth_color: #fdfdfd;
     --fifth_color: #110d0e;
-    --text_color: #868585;
-    --text_color_2: #45b949;
+    --text_color: #d3cdcd;
+    --text_color_2: #047b06;
     --text_color_3: #d0c0ba;
 }
 .wrapper{
     min-height: 100%;
     display: flex;
     flex-direction: column;
+}
+.main{
+    min-height: 50vh;
 }
 /*-------------------------------------------------------------------голова--------------------------------------------------------------------------------------------------------------------------*/
 .header{
@@ -44,11 +49,6 @@ body {
     z-index: 4;
     justify-content: space-between;
 }
-/* .header_container{
-    max-width: 80%;
-    height: auto;
-    display: flex;
-} */
 .header_logo{
     background: var(--fifth_color);
     height: 100%;
@@ -94,9 +94,9 @@ body {
     width: 35%;
     margin-top: auto;
     margin-bottom: auto;
-    /* text-align: center; */
 }
 .button{
+    position: relative;
     float: right;
     border-radius: 5px;
     width: 25%;
@@ -109,170 +109,49 @@ body {
     cursor: pointer;
     margin-left: 10px;
 }
+.all_price_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+.all_price{
+    font-size: 60%;
+}
 .button.basket{
     font-size: 140%;
+    z-index: 1;
 }
+.icon_container{
+    float: left;
+    display: flex;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+ }
 .button:hover{
     transform: scale(1.05) translateY(5px) translateX(-5px);
     border: solid 2px var(--fourth_color);
     color: var(--fourth_color);
 }
-/*-------------------------------------------------------------------блок sticky--------------------------------------------------------------------------------------------------------------------------*/
-
-/*-------------------------------------------------------------------main----------------------------------------------------------------------------------------------------------------------*/
-.main{
-    flex: 1.1 auto;
-}
-/*-------------------------------------------------------------------каталоги---------------------------------------------------------------------------------------------------------------------*/
-.Katalog_main{
-    position: relative;
-    width: 85%;
-    height:auto;
-    background: var(--first_color);
-    color: var(--fourth_color);
-    margin:20px 7.5% 20px 7.5%;
-    border-radius:20px;
-    -webkit-box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3);
-    box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3);
-}
-.Katalog{
-    color: var(--text_color_3);
-    height: 600px;
-    /* min-width: 28.333%; */
-    /* display: inline-block; */
-    text-align: center;
-    background: var(--first_color);
-    /* float: left; */
-    border-radius:20px;
-    /* scroll-snap-align: end; */
-    margin: 0 2.5% 0 2.5%;
-}
-.Katalog_h2{
-    /* margin-top: 2.5%;
-    margin-bottom: 2.5%; */
-    margin:  2.5% 0 2.5% 0;
-    height: 5%;
-}
-/*.Katalog:not(:first-of-type){*/
-/*    margin-left:  5%;*/
-/*}*/
-
-/*-------------------------------------------------------------------каталог Verh---------*/
-.Katalog_Verh{
-    height: 45%;
-    width: 100%;
-    margin-bottom: 5%;
-    background: var(--first_color);
-    border-radius: 10px;
-    transition: all 1s ease;
-}
-.photo{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.Katalog_Verh img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.Katalog_Verh:hover{
-    transform: scale(1.05) translateY(-5px);
-}
-/*-------------------------------------------------------------------каталог Center---------*/
-.Katalog_Center{
-    margin-bottom: 5%;
-    height: 25%;
-    width: 100%;
-    background: var(--first_color);
-    line-height: 15px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.Katalog_Center p{
-    text-align: left;
-    margin-top: 10px;
-    font-style: italic;
-    font-weight: bold;
-}
-/*-------------------------------------------------------------------каталог Niz---------*/
-.Katalog_Niz{
-    height: 10%;
-    width: 100%;
-    float: left;
-    background: var(--fifth_color);
-    color: var(--text_color);
-    border-radius: 10px;
-    line-height: 50px;
-    margin-bottom: 5%;
-}
-.Katalog_Niz_Container{
-    float: left;
-    width: 50%;
-    height: 100%;
-    color: var(--third_color);
-    font-weight: bold;
-    font-size: large;
-}
-.Katalog_Niz_Container span{
-    color: var(--text_color);
-    text-decoration: line-through;
-    text-decoration-color: red;
-    margin-right: 10px;
-}
-.btn_basket{
-    width: 100%;
-    height: 60px;
-    border-radius: 10px;
-    font-size: medium;
-    font-weight: bold;
-    background: var(--fourth_color);
-    transition: all 1s ease;
-    cursor: pointer;
-}
-.btn_basket i{
-    font-size: x-large;
-}
-.btn_basket:hover{
-    transform: translateX(-20px) scale(1.02);
-    color: var(--fourth_color);
-    background: var(--fifth_color);
-}
-
-/*------------------------------------------------------- кнопка up------------------------------------------------------------------*/
-.up_button{
-    background-color:  var(--text_color);
-    width: 70px;
-    height: 70px;
+.block{
     position: fixed;
-    display: flex;
-    bottom: -100px;
-    right: 10px;
-    float: right;
-    z-index: 11;
-    opacity: 0;
-    pointer-events: none;
-    border-radius: 10px;
-    /* text-align: center; */
-    justify-content: center;
-    font-size: 400%;
-    color: var(--first_color);
-    transition: all 1s ease;
+    width: 100%;
+    height: 100%;
+    /* background-color: #57abb8; */
+    /* opacity: 0.2; */
+    z-index: 100;
 }
-.up_button._active-up{
-    opacity: 0.1;
-    pointer-events: auto;
-    bottom: 10px;
+@media (max-width: 1400px){
+    .button{
+        width: 30%;
+        font-size: 110%;
+    }
 }
-.up_button:hover{
-    opacity: 0.5;
-}
-.up_a{
-    text-decoration: none;
-}
-
 @media (max-width: 1000px){
     .header_phone{
         display: none;
@@ -327,14 +206,45 @@ body {
 @import "burger.css";
 @import "header_menu.css";
 @import "promo.css";
+@import "catalog.css";
 @import "info.css";
-@import "footer.css";
 @import "swiper.css";
 @import "show.css";
 @import "contact.css";
 @import "basket.css";
-@import "katalog_menu.css";
+@import "basket_form.css";
+@import "сatalog_menu.css";
+@import "mini_button_basket&button_up.css";
+@import "mini_basket.css";
+@import "footer.css";
+@import "dummy_styles.css";
+
 
 @media (max-width: 1000px){}
 @media (max-width: 740px){}
 @media (max-width: 450px){}
+
+.test{
+    height: 500px;
+    width: 50%;
+    float: left;
+    background-color: antiquewhite;
+}
+.test_p{
+    display: flex;
+    height: 200px;
+    width: 50%;
+    float: left;
+    background-color: #57abb8;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+}
+.test_span{
+    /* display: flex; */
+    display: block;
+    height: 200px;
+    width: 50%;
+    float: right;
+    background-color: #b04b58;
+}

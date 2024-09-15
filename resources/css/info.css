@@ -1,17 +1,24 @@
 /*-------------------------------------------------------------------info----------------------------------------------*/
 .info_main{
-    
-    /* display: flex;
-    flex-direction:column-reverse; */
-    width: 85%;
-    background: var(--first_color);
-    margin: auto;
-    height:auto;
+    width: 100%;
+    padding: 0 7.5% 2% 7.5%;
+    /* height: auto; */
+    /* background: var(--first_color); */
+    background-image: url("/img/sinsai/sinsai-8.jpg");
+    background-size: cover;
+    background-color:#221f1fe6;
+    background-blend-mode: overlay;
+    /* margin: auto; */
+    /* box-sizing: border-box; */
+    /* opacity: 0.5; */
+    display: block;
+    float: left;
 }
 .info{
+    color: var(--text_color);
     float: left;
-    margin-top: 2%;
-    background: var(--first_color);
+    margin-top: 4%;
+    /* background: var(--first_color); */
     width: 49%;
     border-radius: 20px;
     height: 500px;
@@ -26,11 +33,17 @@
 }
 .info.left {
     margin-right: 2%;
-    /* height: 500px; */
+    height: 500px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .info.right{
     /* height: 500px; */
     float: right;
+    -webkit-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .info img{
     border-radius: 20px;
@@ -42,11 +55,20 @@
     box-shadow: inset 0px 0px 30px 10px rgba(0,0,0,0.3);
 }
 @media (max-width: 1000px){
+    .info_main{
+        padding-bottom: 4%;
+    }
     .info{
         width: 100%;
     }
     .info.right{
         float: left;
+    }
+    .info.left{
+        margin-right: 0;
+        -webkit-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
     }
     .info.text{
         height: auto;

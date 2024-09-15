@@ -1,0 +1,10 @@
+.display_none{
+    display: none;
+}
+.error{
+    border: solid var(--third_color) 2px;
+    margin-bottom: 0!important;
+}
+.success{
+    border: solid var(--text_color_2) 2px;
+}

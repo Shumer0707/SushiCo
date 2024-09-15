@@ -1,0 +1,114 @@
+.mini_basket_batton_close{
+    background-color: var(--text_color);
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    display: flex;
+    top: 10px;
+    right: -100px;
+    z-index: 11;
+    opacity: 0.8;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 300%;
+    color: var(--fifth_color);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.mini_basket_batton_close:hover{
+    font-size: 200%;
+    color: var(--third_color);
+}
+.mini_basket_batton_container{
+    background-color: var(--text_color);
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    display: block;
+    bottom: 10px;
+    right: 10px;
+    z-index: 11;
+    opacity: 0.8;
+    border-radius: 10px;
+    font-size: 200%;
+    color: var(--first_color);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.mini_basket_batton_container._active-up{
+    bottom: 90px;
+}
+.mini_basket_batton_container:hover{
+    opacity: 1;
+}
+.mini_basket_batton_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+.mini_basket_batton_all_price{
+    height: 30%;
+    font-size: 75%;
+    /* font-weight: 800; */
+    text-align: center;
+    background-color: var(--third_color);
+    color: var(--fourth_color);
+    border-radius: 0 0 10px 10px;
+}
+._active_right_button{
+    opacity: 1;
+}
+.icon_container .fa-solid::after, .mini_basket_batton_icon .fa-solid::after{
+    position: absolute;
+    font-size: 50%;
+    top: 0;
+    left: -10px;
+    display: flex;
+    background-color: var(--third_color);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    text-align: center;
+    color:var(--fourth_color);
+    justify-content: center;
+    align-items: center;
+}   
+.mini_basket_batton_icon .fa-solid::after{
+   left: 0; 
+   width: 20px;
+   height: 20px;
+}
+/*------------------------------------------------------- кнопка up------------------------------------------------------------------*/
+.up_button{
+    background-color:  var(--text_color);
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    display: flex;
+    bottom: -100px;
+    right: 10px;
+    z-index: 11;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 400%;
+    color: var(--first_color);
+    transition: all 0.5s ease;
+}
+.up_button._active-up{
+    opacity: 0.5;
+    pointer-events: auto;
+    bottom: 10px;
+}
+.up_button:hover{
+    opacity: 0.6;
+}
+.up_a{
+    text-decoration: none;
+}
+._active_right_button{
+    right: 310px;
+}

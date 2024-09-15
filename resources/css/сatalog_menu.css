@@ -1,0 +1,40 @@
+/*-------------------------------------------------------------------каталог Меню---------*/
+.container_menu{
+    width: 100%;
+    /* padding: 0 7.5% 2% 7.5%; */
+    background-image: url("/img/sinsai/sinsai-16.jpg");
+    background-size: cover;
+    background-color: #221f1fd2;
+    background-blend-mode: overlay;
+    display: block;
+    float: left;
+}
+.Сatalog_menu{
+    width: 20%;
+    height: 400px;
+    color: var(--text_color_3);
+    margin: 20px 0 20px 4%;
+    float: left;
+    text-align: center;
+}
+.Catalog_Niz_Container form{
+    height: 100%;
+    width: 100%;
+}
+@media (max-width: 1000px){
+    .Сatalog_menu{
+        width: 30%;
+        margin-left: 2.5%;
+    }
+}
+@media (max-width: 740px){
+    .Сatalog_menu{
+        width: 45.5%;
+        margin-left: 3%;
+    }
+}
+@media (max-width: 450px){
+    .Сatalog_menu{
+        width: 94%;
+    }
+}

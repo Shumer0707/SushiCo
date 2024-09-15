@@ -1,19 +1,28 @@
 /*-------------------------------------------------------------------каталог Меню---------*/
 
-.Katalog_menu.show{
-    width: 80%;
-    height: 100%;
-    margin: 20px 0 20px 10%;
-}
-.Katalog_h2.show{height: 5%}
-.Katalog_Verh.show{
-    width: 50%; 
-    height: 400px; 
-    margin-bottom: 5%;
+.Catalog_menu.show{
+    width: 100%;
+    padding: 0 7.5% 2% 7.5%;
+    background-image: url("/img/sinsai/sinsai-2.jpg");
+    background-size: contain;
+    background-color: #221f1fd2;
+    background-blend-mode: overlay;
+    display: block;
     float: left;
 }
-.Katalog_Verh.show:hover{transform:none}
-.Katalog_Center.show{
+.Catalog_h2.show{
+    height: 5%;
+    text-align: center;
+    color: var(--text_color);
+}
+.Catalog_Verh.show{
+    width: 50%; 
+    height: 400px; 
+    margin-bottom: 2.5%;
+    float: left;
+}
+.Catalog_Verh.show:hover{transform:none}
+.Catalog_Center.show{
     width: 50%;
     height: 400px;
     margin: 0;
@@ -23,25 +32,34 @@
     float: left;
     display: flex;
 }
-.Katalog_Center.show p{
+.Catalog_Center.show p{
     margin-top: 20px; 
     font-size: 120%; 
-    line-height: normal
+    line-height: normal;
+    color: var(--text_color_3);
 }
-.container_Katalog_Center{
+.Container_Catalog_Center{
     align-items: center; 
     justify-content: center;
 }
-.Katalog_Niz.show{
+.Catalog_Niz.show{
     height: 10%;
-    margin-bottom: 0;
+    margin-bottom: 2.5%;
+    background: none;
 }
-.Katalog_Niz_Container.show{
+.Catalog_Niz_Container.show{
     width: 100%; 
-    background: var(--first_color)
+    /* background: var(--first_color) */
+}
+.Catalog_Niz_right.show{
+    /* display: flex; */
+    /* align-items: center; 
+    justify-content: center; */
+    width: 20%;
+    height: 40px;
 }
 .btn_basket.show{
-    width: 35%;
+    width: 100%;
     float: left
 }
 .btn_basket.show.beck{
@@ -49,13 +67,18 @@
     color: var(--fourth_color);
 }
 .price.show{
-    width: 30%; 
-    height: 60px; 
-    background: var(--first_color); 
+    display: flex;
+    width: 20%; 
+    height: 40px; 
+    margin: 0 20% 0 20%;
+    /* background: var(--first_color);  */
     color: var(--text_color_2);
     float: left;
-    line-height: 60px;
     font-size: 125%;
+    align-items: center;
+    justify-content: center;
+    border:1px solid var(--text_color);
+    border-radius: 10px;
 }
 .btn_basket.show.beck:hover{
     transform: translateX(10px) scale(1.02);
@@ -63,23 +86,46 @@
     background: var(--fourth_color);
 }
 @media (max-width: 1000px){
-    .Katalog_Verh.show{
+    .Catalog_Verh.show{
         height: 350px;
     }
-    .Katalog_Center.show{
+    .Catalog_Center.show{
         height: 350px;
     }
 }
 @media (max-width: 740px){
-    .Katalog_Verh.show{
-        height: 250px;
+    .Catalog_Verh.show{
+        /* height: 250px; */
+        width: 100%;
     }
-    .Katalog_Center.show{
-        height: 250px;
+    .Catalog_Center.show{
+        height: auto;
+        width: 100%;
+        padding: 0;
     }
-    .Katalog_Center.show p{
+    .Catalog_Center.show p{
         font-size: 100%; 
-        line-height: normal
+        /* line-height: normal */
+    }
+    .Catalog_Niz_right.show{
+        width: 30%;
+    }
+    .price.show{
+        width: 30%;
+        margin: 0 5% 0 5% ;
     }
 }
-@media (max-width: 450px){}
+@media (max-width: 450px){
+    .price.show{
+        width: 30%;
+        font-size: 100%;
+        margin: 0 2% 0 2% ;
+    }
+    .Catalog_Verh.show{
+        height: 250px;
+        /* width: 100%; */
+    }
+    .Catalog_Niz_right.show{
+        width: 33%;
+    }
+}
