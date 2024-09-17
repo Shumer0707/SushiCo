@@ -2292,6 +2292,7 @@ function listenClick(e) {
     var form_data = formData();
     var all_name_form = allNameForm(form_data);
     res = [];
+    // console.log(form_data);
     all_name_form.forEach(function (element) {
       var obj = document.querySelector("[name=".concat(element, "]"));
       var obj_error = document.querySelector("#".concat(element, "_error"));

@@ -81,17 +81,20 @@
                     <div id="phone_confirmation_error" class="basket_error"></div>
                 </div>
             </div>
-            <div class="basket_form_h3_wrapper">
-                <div  class="basket_form_btn_container delivery">
-                    <input class="disabled_input" type="radio" id="delivery" name="logistics" value="delivery" checked/>
-                    <label class="basket_form_btn" for="delivery">Доставка</label>
-                </div>
-                <div  class="basket_form_btn_container delivery">
-                    <input class="disabled_input" type="radio" id="self_pickup" name="logistics" value="self_pickup" />
-                    <label class="basket_form_btn" for="self_pickup">Самовывоз</label>
-                </div>
+            <div class="basket_form_h3">
+                <h3>Условия доставки</h3>
             </div>
             <div class="personal_data_container">
+                <div class="basket_form_h3_wrapper">
+                    <div  class="basket_form_btn_container delivery">
+                        <input class="disabled_input" type="radio" id="delivery" name="logistics" value="delivery" checked/>
+                        <label class="basket_form_btn" for="delivery">Доставка</label>
+                    </div>
+                    <div  class="basket_form_btn_container delivery">
+                        <input class="disabled_input" type="radio" id="self_pickup" name="logistics" value="self_pickup" />
+                        <label class="basket_form_btn" for="self_pickup">Самовывоз</label>
+                    </div>
+                </div>
                 <div id="personal_data_address" class="personal_data_address">
                     <div id class="personal_data">
                         <label for="adr"><i class="fa-solid fa-phone"></i> Address</label>
@@ -104,6 +107,23 @@
                     <label for="adr"><i class="fa-solid fa-phone"></i> Детали заказа</label>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div> --}}
+            </div>
+            <div class="basket_form_h3">
+                <h3>Способ оплаты</h3>
+            </div>
+            <div class="personal_data_container">
+                <div  class="basket_form_btn_container delivery">
+                    <input class="disabled_input" type="radio" id="cash" name="payment" value="cash" checked/>
+                    <label class="basket_form_btn" for="cash">Наличка</label>
+                </div>
+                <div  class="basket_form_btn_container delivery">
+                    <input class="disabled_input" type="radio" id="card_on_site" name="payment" value="card_on_site"/>
+                    <label class="basket_form_btn" for="card_on_site">Картой на месте</label>
+                </div>
+                <div  class="basket_form_btn_container delivery">
+                    <input class="disabled_input" type="radio" id="online" name="payment" value="online"/>
+                    <label class="basket_form_btn" for="online">Онлайн платеж</label>
+                </div>
             </div>
             <div class="basket_form_h3">
                 <h3>Детали заказа</h3>
@@ -134,9 +154,9 @@
             <div class="basket_form_btn_container">
                 <button id="basket_form_btn" class="basket_form_btn" type="button">К оплате</button>
             </div>
-            {{-- <div class="basket_form_btn_container_error display_none">
+            <div class="basket_form_btn_container_error display_none">
                 <span>Ошибка сервера! Сорян. Наберите пожалуйста номер 0700000000. Пусть наберут криворукого программиста. То-есть меня!</span>
-            </div> --}}
+            </div>
         </form>
     </div>
     @endif

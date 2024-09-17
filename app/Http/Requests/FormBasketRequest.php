@@ -30,6 +30,7 @@ class FormBasketRequest extends FormRequest
             'logistics' => 'required',
             'address' => 'bail|required_unless:logistics,=,self_pickup',
             'details' => 'max:200',
+            'payment' => 'required|max:1',
         ];
     }
 }

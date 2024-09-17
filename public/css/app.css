@@ -968,6 +968,7 @@ body.pc .test_menu_list > li:hover {}
 .personal_data{
     width: 50%;
     padding-right: 5%;
+    margin: 1vh 0 1vh 0 ;
 }
 .personal_data span{
     display: flex;
@@ -983,7 +984,6 @@ label {
   }
 input[type=text], input[type=email], input[type=tel], input[type=number]{
     width: 100%;
-    margin-bottom: 20px;
     padding: 12px;
     border-radius: 3px;
   }
@@ -1010,17 +1010,18 @@ input[type=text], input[type=email], input[type=tel], input[type=number]{
 }
 .basket_form_btn_container{
     float: right;
-    /* display: flex; */
-    /* width: fit-content; */
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
     /* align-items: center; */
     /* justify-content: center; */
     height: 5vh;
     margin: 0.5vh 5% 0.5vh 0;
-    width: 150px;
+    /* width: 150px; */
 }
-.basket_form_btn_container.delivery{
-    margin: 0.5vh 0 0.5vh 5%;
-}
+/* .basket_form_btn_container.delivery{
+    margin-bottom: 1vh;
+} */
 .basket_form_btn{
     background-color: var(--first_color);
     color: var(--text_color);
@@ -1029,10 +1030,10 @@ input[type=text], input[type=email], input[type=tel], input[type=number]{
     align-items: center;
     min-width: 100%;
     height: 100%;
-    padding: 0.5vh 5% 0.5vh 5%;
+    /* padding: 0.5vh 5% 0.5vh 5%; */
     font-size: 1.17em;
-    font-weight: bold;
-    letter-spacing:0.5px;
+    /* font-weight: bold; */
+    /* letter-spacing:0.5px; */
     border-top: 1px solid var(--text_color);
     border-bottom: 1px solid var(--text_color);
     border-radius: 10px;

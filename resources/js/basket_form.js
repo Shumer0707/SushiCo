@@ -91,6 +91,7 @@ function listenClick(e){
         let form_data = formData();
         let all_name_form = allNameForm(form_data);
         res = [];
+        // console.log(form_data);
         all_name_form.forEach(element => {
             var obj = document.querySelector(`[name=${element}]`);
             var obj_error = document.querySelector(`#${element}_error`);
