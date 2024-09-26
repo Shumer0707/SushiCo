@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\FormMail;
+use App\Mail\OrderMail;
 use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class BasketController extends Controller
 {
@@ -88,6 +91,8 @@ class BasketController extends Controller
         }
     }
     public function test(){
+        // Mail::to('shumer0707@mail.ru')->send(new OrderMail('ok'));
+        // dd('ok');
         // function all_view(){
         //     $arr = ['fetch.basket.test', 'fetch.basket.fetch_post'];
         //     foreach($arr as $el){
@@ -96,6 +101,7 @@ class BasketController extends Controller
         // }
         // $ARR[] = all_view();
         // return $ARR;
+        return view('mail.order');
     }
 }
 

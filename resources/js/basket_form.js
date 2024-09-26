@@ -9,7 +9,7 @@ const address = document.querySelector('#address');
 const basket_form_btn_container_error = document.querySelector('.basket_form_btn_container_error');
 
 function formData(){
-    const formData = new FormData(document.querySelector('#basket_form'));
+    let formData = new FormData(document.querySelector('#basket_form'));
     // formData.forEach((value, key) => console.log((`${key}: ${value}`)));
     // const arr = new Object();
     // const arr = new Map();
@@ -64,6 +64,7 @@ async function onblurOnfocus(){
     });
 }
 function validateOnblur(obj, obj_error){
+    obj.classList.remove('success');
     if(!obj.value){
         obj.classList.add('error');
         obj_error.innerHTML = 'Обязательно к заполнению.';
@@ -89,9 +90,9 @@ function listenClick(e){
     followLogistics(e);
     if(e.target.id == 'basket_form_btn'){
         let form_data = formData();
+        // const form = new FormData(basket_form);
         let all_name_form = allNameForm(form_data);
         res = [];
-        // console.log(form_data);
         all_name_form.forEach(element => {
             var obj = document.querySelector(`[name=${element}]`);
             var obj_error = document.querySelector(`#${element}_error`);
@@ -117,25 +118,29 @@ function sendRequest_POST(route, data) {
         fetch(route, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                // "Content-Type": "application/json",
+                "accept":"application/json",
                 "X-CSRF-Token": csrf
             },
-            body: JSON.stringify(data),
+            body: new FormData(basket_form)
+            // body: new FormData(document.querySelector('#basket_form')),
             // body: JSON.stringify({'test':'string_test','username' : 'Goga',
             // 'email' : 'aa@mail.ru',}),
         })
         .then(res => {
             if(!res.ok){
                 console.log('Problem');
+                basket_form_btn_container_error.classList.remove('display_none');
                 return;
             }
+            // return res.text();
             return res.json();
         })
         .then(data => {
             console.log(data);
         })
         .catch((error => {
-            console.log(error);
+            console.error('Fetch error:', error);
             basket_form_btn_container_error.classList.remove('display_none');
         }));   
     };

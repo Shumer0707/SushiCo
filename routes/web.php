@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/','PromoController@index')->name('promo.index');
@@ -14,11 +13,12 @@ Route::get('/basket', 'BasketController@index')->name('basket.index');
 Route::get('/basket/{id}', 'BasketController@add_to_basket')->name('basket.add_to_basket');
 Route::get('/test', 'BasketController@test')->name('basket.test');
 
-// Route::post('/fetch_post', 'BasketController@fetch_post');
 Route::get('/fetch_data/{val}/{name}/{id}', 'BasketController@fetch_data');
 Route::get('/fetch_vieu/{val}/{id}', 'BasketController@fetch_vieu');
 
 Route::post('/form_basket', 'FormBasketController@index');
+
+Route::get('/fetch_lang/{lang}', 'LangController@index');
 
 Route::get('/delete', 'DeleteController@index');
 Route::get('/sesion', 'DeleteController@sesion');

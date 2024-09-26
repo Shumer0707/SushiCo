@@ -487,6 +487,10 @@ body.pc .test_menu_list > li:hover {}
     color: var(--fourth_color);
     background: var(--fifth_color);
 }
+.btn_basket:focus{
+    color: var(--fourth_color);
+    background: var(--fifth_color);
+}
 /*-------------------------------------------------------------------info----------------------------------------------*/
 .info_main{
     width: 100%;
@@ -1011,8 +1015,8 @@ input[type=text], input[type=email], input[type=tel], input[type=number]{
 .basket_form_btn_container{
     float: right;
     display: flex;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 170px;
+    /* width: fit-content; */
     /* align-items: center; */
     /* justify-content: center; */
     height: 5vh;

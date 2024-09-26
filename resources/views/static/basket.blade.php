@@ -85,15 +85,13 @@
                 <h3>Условия доставки</h3>
             </div>
             <div class="personal_data_container">
-                <div class="basket_form_h3_wrapper">
-                    <div  class="basket_form_btn_container delivery">
-                        <input class="disabled_input" type="radio" id="delivery" name="logistics" value="delivery" checked/>
-                        <label class="basket_form_btn" for="delivery">Доставка</label>
-                    </div>
-                    <div  class="basket_form_btn_container delivery">
-                        <input class="disabled_input" type="radio" id="self_pickup" name="logistics" value="self_pickup" />
-                        <label class="basket_form_btn" for="self_pickup">Самовывоз</label>
-                    </div>
+                <div  class="basket_form_btn_container delivery">
+                    <input class="disabled_input" type="radio" id="delivery" name="logistics" value="delivery" checked/>
+                    <label class="basket_form_btn" for="delivery">Доставка</label>
+                </div>
+                <div  class="basket_form_btn_container delivery">
+                    <input class="disabled_input" type="radio" id="self_pickup" name="logistics" value="self_pickup" />
+                    <label class="basket_form_btn" for="self_pickup">Самовывоз</label>
                 </div>
                 <div id="personal_data_address" class="personal_data_address">
                     <div id class="personal_data">
@@ -101,7 +99,7 @@
                         <input type="text" id="address" name="address" placeholder="Ismail 86" required>
                         <div id="address_error" class="basket_error"></div>
                     </div>
-                    <div class="personal_data"><span>Доставка от 500.0 MDL бесплатно</span></div>
+                    <div class="personal_data"><span>Доставка от {{config('my_config.del_min_sum')}} MDL бесплатно</span></div>
                 </div>
                 {{-- <div class="personal_data">
                     <label for="adr"><i class="fa-solid fa-phone"></i> Детали заказа</label>
@@ -120,10 +118,6 @@
                     <input class="disabled_input" type="radio" id="card_on_site" name="payment" value="card_on_site"/>
                     <label class="basket_form_btn" for="card_on_site">Картой на месте</label>
                 </div>
-                <div  class="basket_form_btn_container delivery">
-                    <input class="disabled_input" type="radio" id="online" name="payment" value="online"/>
-                    <label class="basket_form_btn" for="online">Онлайн платеж</label>
-                </div>
             </div>
             <div class="basket_form_h3">
                 <h3>Детали заказа</h3>
@@ -139,11 +133,31 @@
                                 <div class="order_details right">{{$val->price * $_SESSION['prod'][$val->id]}}.0MDL</div>
                             </div>
                         @endforeach
+                        @if ($_SESSION['all_price'] < config('my_config.del_min_sum')) 
+                            <div class="order_details_container">
+                                <div class="order_details left">Доставка</div>
+                                <div class="order_details center">--</div>
+                                <div class="order_details right">50.0MDL</div>
+                            </div>
+                            <div class="order_details_container">
+                                <div class="order_details left"></div>
+                                <div class="order_details center">Всего:</div>
+                                <div class="order_details right">
+                                    <b>{{$_SESSION['all_price'] + config('my_config.del_price')}}.0MDL</b>
+                                </div>
+                            </div>
+                        @else
+                            <div class="order_details_container">
+                                <div class="order_details left">Доставка</div>
+                                <div class="order_details center">--</div>
+                                <div class="order_details right">0.0MDL</div>
+                            </div>
                             <div class="order_details_container">
                                 <div class="order_details left"></div>
                                 <div class="order_details center">Всего:</div>
                                 <div class="order_details right"><b>{{$_SESSION['all_price']}}.0MDL</b></div>
                             </div>
+                        @endif
                     @endisset
                 </div>
                 <div class="personal_data">
@@ -174,7 +188,7 @@
     
     {{-- <a href="/delete"><button class="btn_basket test_basket">Удалить все<i class="fa-solid fa-basket-shopping"></i></button></a>
     <a href="/sesion"><button class="btn_basket test_basket">sesion<i class="fa-solid fa-basket-shopping"></i></button></a> --}}
-    {{-- <a href={{ route('basket.test')}}><button class="btn_basket test_basket">test<i class="fa-solid fa-basket-shopping"></i></button></a> --}}
+    <a href={{ route('basket.test')}}><button class="btn_basket test_basket">test<i class="fa-solid fa-basket-shopping"></i></button></a>
     {{-- <button id="button_test">test</button> --}}
     {{-- <style>
         .test_DOM_content{

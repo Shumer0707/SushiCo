@@ -28,21 +28,22 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(170);
     
-            View::composer(['layout.main', 
-            'static.basket', 
-            'fetch.wraper_basket', 
-            'fetch.main.mini_basket_catalog_wrapper',
-            'fetch.main.order_details'
-            ], 
-            function($view){
-                if(isset($_SESSION['prod'])){
-                    $view->with(['basket' => Menu::
-                        when($_SESSION['prod'], function($query){
-                            return $query->whereIn('id', $_SESSION['prod']->keys()); 
-                        })->get()
-                    
-                    ]);
-                }
-            });   
+        View::composer(['layout.main', 
+        'static.basket', 
+        'fetch.wraper_basket', 
+        'fetch.main.mini_basket_catalog_wrapper',
+        'fetch.main.order_details',
+        'mail.order'
+        ], 
+        function($view){
+            if(isset($_SESSION['prod'])){
+                $view->with(['basket' => Menu::
+                    when($_SESSION['prod'], function($query){
+                        return $query->whereIn('id', $_SESSION['prod']->keys()); 
+                    })->get()
+                
+                ]);
+            }
+        });   
     }
 }

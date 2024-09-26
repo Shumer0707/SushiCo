@@ -32,12 +32,13 @@
                         </div>
                     </button>   
                 </a>
-                <a href="{{route('contact.index')}}"><button class="button contacti"><p>Контакты</p></button></a>
-                <a href="{{route('promo.index')}}"><button class="button home"><p>Главная</p></button></a>
+                <a href="{{route('contact.index')}}"><button class="button contacti">Контакты</button></a>
+                <a href="{{route('promo.index')}}"><button class="button home">{{__('mess.home')}}</button></a>
             </div>
         </header>
         <!--блок меню-->
         <div class="header_menu_sticky">
+            @include('section.lang')
             <div class="header_menu_container">
                 <div class="header_menu_logo"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>
                 <div class="header_menu">
