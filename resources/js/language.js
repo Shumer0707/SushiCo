@@ -22,9 +22,8 @@ async function send_GET(route) {
     })
     .then(data => {
         if (data.success) {
-            console.log(data);
-            
-            // location.reload();
+            // console.log(data);
+            location.reload();
         }
     })
     .catch((error => {

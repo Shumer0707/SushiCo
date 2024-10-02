@@ -75,6 +75,21 @@
     justify-content: center;
     align-items: center;
 }   
+.mini_test{
+    position: absolute;
+    font-size: 50%;
+    top: 1px;
+    left: 1px;
+    display: flex;
+    background-color: var(--third_color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    color:var(--fourth_color);
+    justify-content: center;
+    align-items: center;
+}   
 .mini_basket_batton_icon .fa-solid::after{
    left: 0; 
    width: 20px;

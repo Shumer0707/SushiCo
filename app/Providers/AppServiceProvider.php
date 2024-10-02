@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use App\Models\Menu;
+use Illuminate\Support\Facades\App;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -44,6 +45,7 @@ class AppServiceProvider extends ServiceProvider
                 
                 ]);
             }
-        });   
+        }); 
+        // App::setLocale('ro');php artisan make:middleware SetLocale
     }
 }

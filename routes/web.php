@@ -18,7 +18,7 @@ Route::get('/fetch_vieu/{val}/{id}', 'BasketController@fetch_vieu');
 
 Route::post('/form_basket', 'FormBasketController@index');
 
-Route::get('/fetch_lang/{lang}', 'LangController@index');
+Route::get('/fetch_lang/{lang}', 'LangController@index')->name('lang.index');
 
 Route::get('/delete', 'DeleteController@index');
 Route::get('/sesion', 'DeleteController@sesion');

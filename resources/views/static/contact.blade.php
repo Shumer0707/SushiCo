@@ -13,9 +13,9 @@
         </div>
         <div class="info right cont">
             <div class="contact">
-                <h1>Контакты</h1>
-                <h2>STRADA ISMAIL 86, CHIȘINĂU</h2>
-                <h2>PROGRAM: 11:00 — 22:00</h2>
+                <h1>{{__('header.contacts')}}</h1>
+                <h2>{{__('footer.address')}}</h2>
+                <h2>{{__('footer.program')}}</h2>
                 <h2>078 125 533</h2>
                 <h2>WWW.SUSHIKO.MD</h2>
                 <div class="social_icons">

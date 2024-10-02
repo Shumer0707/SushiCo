@@ -17,12 +17,15 @@
                     <span class="header_phone_nomer_text" href="" target="_blank">060000000</span>
                     <span class="header_phone_nomer_text" href="" target="_blank">070000000</span>
                 </div>
-                <div class="header_phone_dostavka">с 10:00 до 22:00 Доставка занимает в среднем 40 минут.</div>
+                <div class="header_phone_dostavka">{{__('header.time_delivery')}}</div>
             </div>
             <div class="header_lang">
                 <a href="{{route('basket.index')}}">
                     <button class="button basket">
-                    <div class="icon_container"><i class="fa-solid fa-basket-shopping"></i></div>
+                    <div class="icon_container">
+                        {{-- <div class="mini_test">1</div> --}}
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </div>
                         <div id="all_price_wrapper" class="all_price_wrapper">
                             @if(isset($_SESSION['count'], $_SESSION['all_price']))
                                 <span class="all_price">{{$_SESSION['all_price']}}.0 MDL</span>
@@ -32,8 +35,8 @@
                         </div>
                     </button>   
                 </a>
-                <a href="{{route('contact.index')}}"><button class="button contacti">Контакты</button></a>
-                <a href="{{route('promo.index')}}"><button class="button home">{{__('mess.home')}}</button></a>
+                <a href="{{route('contact.index')}}"><button class="button contacti">{{__('header.contacts')}}</button></a>
+                <a href="{{route('promo.index')}}"><button class="button home">{{__('header.home')}}</button></a>
             </div>
         </header>
         <!--блок меню-->
@@ -47,18 +50,18 @@
                     </div>
                     <nav class="header_menu_body" id="header_menu_body">
                         <ul class="header_menu_list">
-                            <a href="/menu/set"><li>Сеты</li></a>
-                            <a href="/menu/set"><li>Нигири</li></a>
-                            <a href="/menu/set"><li>Гункан</li></a>
-                            <a href="/menu/set"><li>Хосомаки</li></a>
-                            <a href="/menu/set"><li>Уромаки</li></a>
-                            <a href="/menu/set"><li>Темпура</li></a>
-                            <a href="/menu/set"><li>Сашими</li></a>
-                            <a href="/menu/set"><li>Суномон</li></a>
-                            <a href="/menu/set"><li>Лапша</li></a>
-                            <a href="/menu/set"><li>Рис</li></a>
-                            <a href="/menu/set"><li>Супы</li></a>
-                            <a href="/menu/set"><li>Напити</li></a>
+                            <a href="/menu/set"><li>{{__('header.set')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.nigiri')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.guncan')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.hosomaki')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.uramaki')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.tempura')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.sashimi')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.sunomon')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.lapsha')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.ris')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.sup')}}</li></a>
+                            <a href="/menu/set"><li>{{__('header.napitki')}}</li></a>
                         </ul>
                     </nav>
                 </div>
@@ -75,8 +78,8 @@
                 <div class="footer_content centr"><img src="/img/kat_1.jpg" alt="Sushico Логотип"></div>
                 <div class="footer_content right">
                     <div class="container_flex">
-                        <h2>STRADA ISMAIL 86, CHIȘINĂU</h2>
-                        <h2>PROGRAM: 11:00 — 22:00</h2>
+                        <h2>{{__('footer.address')}}</h2>
+                        <h2>{{__('footer.program')}}</h2>
                         <h2>078 125 533</h2>
                         <h2>WWW.SUSHIKO.MD</h2>
                         <div class="social_icons">
@@ -90,12 +93,12 @@
             </div>
             <div class="footer_menu">
                 <nav>
-                    <a href="/">Главная</a>
-                    <a href="/contact">Контакты</a>
-                    <a href="/agreement">Условия использования</a>
+                    <a href="/">{{__('footer.home')}}</a>
+                    <a href="/contact">{{__('footer.contacts')}}</a>
+                    <a href="/agreement">{{__('footer.terms_of_use')}}</a>
                 </nav>
             </div>
-            <p>© 2023 sushico.md - Все права защищены</p>
+            <p>© 2023 sushico.md - {{__('footer.protect')}}</p>
         </footer>
         <div id="all_style">
             @isset($_SESSION['count'])

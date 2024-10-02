@@ -12,6 +12,7 @@
     <div class="mini_basket_batton_icon">
         <i class="fa-solid fa-basket-shopping"></i>
     </div>
+    {{-- <div class="mini_test">1</div> --}}
     <div class="mini_basket_batton_all_price_wraper">
         <div class="mini_basket_batton_all_price">
             @if(isset($_SESSION['all_price']))

@@ -14,4 +14,9 @@ class MenuController extends Controller
         $menu=DB::table('menus')->where('category', $category)->get();
         return view('static.menu')->with('menu',$menu)->with('category',$category);
     }
+
+    public function show($id){
+        $menu = Menu::where('id', $id)->get();
+        return view('static.show')->with('menu',$menu);
+    }
 }

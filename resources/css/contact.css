@@ -33,9 +33,9 @@
 
 .fa-brands{
     font-size: 300%;
-    background: var(--first_color);
     color: var(--text_color);
-    transition: all 0.5s ease;
+    transition: all 0.5s ease ;
+    pointer-events:all;
 }
 .fa-brands:hover{
     transform: scale(1.05) translateY(-5px);

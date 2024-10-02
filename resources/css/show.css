@@ -36,7 +36,8 @@
     margin-top: 20px; 
     font-size: 120%; 
     line-height: normal;
-    color: var(--text_color_3);
+    color: var(--fourth_color);
+    /* color: var(--text_color_3); */
 }
 .Container_Catalog_Center{
     align-items: center; 

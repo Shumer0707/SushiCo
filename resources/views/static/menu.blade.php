@@ -6,7 +6,7 @@
 @section('content')
     <!--Коталог Акция------------------------------------------------------------------------------------------>
     <div class="container_menu">
-        <h1>Меню : {{$category}}</h1>
+        <h1>{{__('menu.menu')}} : {{$category}}</h1>
         @if($menu != '')
             <div id="wraper_catalog_menu">
                 @foreach($menu as $el)
@@ -39,7 +39,7 @@
                                 @else
                                 {{-- <a href={{route('basket.add_to_basket', $el->id)}}> --}}
                                     <button id="add_btn" class="btn_basket" value="{{$el->id}}" name="plus">
-                                        Добавить <i class="fa-solid fa-basket-shopping"></i>
+                                        {{__('menu.add')}} <i class="fa-solid fa-basket-shopping"></i>
                                     </button>
                                 {{-- </a> --}}
                                 @endif

@@ -20,7 +20,7 @@
     </div>
 </div>
 <div class="info_main">
-<h1>Лутшие цены на сеты, для вас и ваших друзей</h1>
+<h1>{{__('home.h1')}}</h1>
 {{-- @dd($menu[0]) --}}
 <div class="Catalog_main" id="Акция">
     <div class="swiper Swiper_menu">
@@ -59,7 +59,7 @@
                             </div>
                             @else
                                 <button id="add_btn" class="btn_basket" value="{{$el->id}}" name="plus">
-                                    Добавить <i class="fa-solid fa-basket-shopping"></i>
+                                    {{__('menu.add')}} <i class="fa-solid fa-basket-shopping"></i>
                                 </button>
                             @endif
                         </div>
@@ -77,18 +77,17 @@
     <div class="info left"><img src="img\info\rolli-1.jpg" alt="1"></div>
     <div class="info right text">
         <div class="info_h">
-            <h2>Изысканные роллы.
-            <br/>Приготовленные из продуктов высочайшего качества.
-            <br/>Мы рады угостить вас как класическими рецептами, так и необычными сочетаниями вкусов,способных удовлетворить самых изыскательных гостей.
+            <h2>{{__('home.info1_1')}}
+                <br/>{{__('home.info1_2')}}
+                <br/>{{__('home.info1_3')}}
             </h2>
         </div>
     </div>
     <div class="info right"><img src="img\info\man-1.jpg" alt="1"></div>
     <div class="info left text" >
         <div class="info_h">
-            <h2>О команде.
-                <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Architecto aspernatur autem culpa, cum doloribus ex inventore possimus quasi quis ullam!
+            <h2>{{__('home.info2_1')}}
+            <br/>{{__('home.info2_2')}}
             </h2>
         </div>
     </div>

@@ -1,18 +1,16 @@
 .header_menu_sticky{
-    display: flex;
+    display: block;
     background: var(--fifth_color);
-    /* background: var(--third_color); */
     position: sticky;
-    top: 0;
-    height: auto;
+    top: -1px;
     width: 100%;
     z-index: 3;
 }
 .header_menu_container{
-    width: 90%;
+    min-width: 80%;
+    max-width: 85%;
     margin: 0 auto;
     display: flex;
-    padding: 0 2.5%;
     align-items: center;
     justify-content: space-between;
     min-height: 70px; 
@@ -40,7 +38,6 @@
 .header_menu_icon{
     display: none;
 }
-.header_menu_body{}
 .header_menu_list{
     /* float: right; */
     /* display: flex;
@@ -60,11 +57,11 @@
     text-decoration: none;
     color: aliceblue;
     font-size: 18px;
-    margin-right: 20px;
+    margin-left: 15px;
     transition: all 0.2s ease;
 }
 .header_menu_list a:hover{
-    transform: scale(1.05) translateY(5px) translateX(-5px);
+    transform: scale(1.05) translateY(2px) translateX(-2px);
 }
 @media (min-width: 1001px){
     .header_menu_list{

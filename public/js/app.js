@@ -2777,9 +2777,8 @@ function _send_GET() {
             return res.json();
           }).then(function (data) {
             if (data.success) {
-              console.log(data);
-
-              // location.reload();
+              // console.log(data);
+              location.reload();
             }
           })["catch"](function (error) {
             console.log(error);
