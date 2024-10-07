@@ -15,6 +15,8 @@ const { forEach } = require("lodash");
         if(wraper_basket){
             var route = `/fetch_vieu/wraper_basket/no`;
             sendView_GET(route, wraper_basket);
+            var route = `/fetch_vieu/main.order_details/no`;
+            sendView_GET(route, order_details);
         }
         var route = `/fetch_vieu/main.mini_basket_catalog_wrapper/no`;
         sendView_GET(route, mini_basket_catalog_wrapper);
@@ -24,8 +26,6 @@ const { forEach } = require("lodash");
         sendView_GET(route, mini_basket_batton_all_price_wraper);
         var route = `/fetch_vieu/main.all_price_wrapper/no`;
         sendView_GET(route, all_price_wrapper);
-        var route = `/fetch_vieu/main.order_details/no`;
-        sendView_GET(route, order_details);
     }
     function close_and_countClick(e){
         countClick(e);
@@ -76,7 +76,7 @@ const { forEach } = require("lodash");
         wrapper.addEventListener('click', close_and_countClick);
     }
     async function sendView_GET(route, element) {
-        await fetch(route)
+        fetch(route)
         .then(res => {
             if(!res.ok){
                 console.log('Problem');
@@ -85,8 +85,12 @@ const { forEach } = require("lodash");
             return res.text();
         })
         .then(data => {
+            if(element.length > 1){
+                element.forEach(function(e){
+                    e.innerHTML = data;
+                });
+            }
             element.innerHTML = data;
-            // console.log(data);
         })
         .catch((error => {
             console.log(error);
@@ -110,9 +114,10 @@ const { forEach } = require("lodash");
     };
     function sendVieuMenu_GET(id){
         if(catalog){
-            let catalog_niz_right = document.querySelector(`#catalog_niz_right_${id}`);
+            let catalog_niz_right = document.querySelectorAll(`#catalog_niz_right_${id}`);
             let route = `/fetch_vieu/main.catalog/${id}`;
             sendView_GET(route, catalog_niz_right)
+            
         }
     }
 

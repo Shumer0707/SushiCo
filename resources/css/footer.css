@@ -4,22 +4,23 @@
     width: 100%;
     height:230px;
     text-align: center;
-    border-top: 2px var(--text_color) solid;
-    background: var(--first_color);
+    border-top: 2px var(--third_color) solid;
+    /* border-top: 2px var(--text_color) solid; */
+    background-color: var(--fifth_color);
     color: var(--fourth_color);
 }
 .footer_promo{
     margin-top: 20px;
     width: 100%;
     height: 125px;
-    background: var(--first_color);
+    background-color: var(--fifth_color);
 }
 .footer_content{
     float: left;
     margin-left: 2.5%;
     width: 30%;
     height: 100%;
-    background: var(--first_color);
+    background-color: var(--fifth_color);
 }
 .footer_promo img{
     width: 100%;

@@ -13,8 +13,44 @@
 .swiper-button-next {
     right: -6% !important;
     z-index: 2 !important;
+    background-color: var(--text_color);
+    color: var(--fifth_color) !important;
+    opacity: 0.3;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+}
+.swiper-button-next::after{
+    font-size: 30px !important;
+}
+.swiper-button-next:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3);
 }
 .swiper-button-prev {
     left: -6% !important;
     z-index: 2 !important;
+    background-color: var(--text_color);
+    color: var(--fifth_color) !important;
+    opacity: 0.3;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+}
+.swiper-button-prev::after{
+    font-size: 30px !important;
+}
+.swiper-button-prev:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3);
 }

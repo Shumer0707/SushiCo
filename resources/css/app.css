@@ -23,12 +23,12 @@ body {
     background: var(--first_color);
     --first_color: #34302f;
     --second_color: #b5836b;
-    --third_color: #f6314a;
+    --third_color: #fe2b2b;
     --fourth_color: #fdfdfd;
     --fifth_color: #110d0e;
-    --text_color: #d3cdcd;
-    --text_color_2: #047b06;
-    --text_color_3: #d0c0ba;
+    --text_color: #ebe7e7;
+    --text_color_2: #7fe381;
+    --text_color_3: #919291;
 }
 .wrapper{
     min-height: 100%;
@@ -123,6 +123,7 @@ body {
 .button.basket{
     font-size: 140%;
     z-index: 1;
+    /* border: solid 2px var(--third_color); */
 }
 .icon_container{
     float: left;
@@ -135,8 +136,12 @@ body {
  }
 .button:hover{
     transform: scale(1.05) translateY(5px) translateX(-5px);
-    border: solid 2px var(--fourth_color);
+    border: solid 2px var(--third_color);
     color: var(--fourth_color);
+    /* color: var(--third_color); */
+}
+.button.basket:hover{
+
 }
 .block{
     position: fixed;
@@ -152,7 +157,7 @@ body {
         font-size: 110%;
     }
 }
-@media (max-width: 1000px){
+@media (max-width: 1024px){
     .header_phone{
         display: none;
     }
@@ -189,16 +194,17 @@ body {
     .header_lang{
         width: 60%;
     }
-    .button.contacti{
+    .button.contacti, .button.home{
         display: none;
     }
-    .button{
-        width: 45%;
+    /* .button{
+        width: 60%;
         font-size: 130%;
-    }
+    } */
     button.basket{
-        width: 30%;
-        margin-left:20px 
+        width: 70%;
+        padding: 0 10px 0 10px;
+        border: var(--text_color_3) solid 2px;
     }
 }
 /*-------------------------------------------------------------------Popap-----------------------------------------------------------------------------------------------------------------------*/

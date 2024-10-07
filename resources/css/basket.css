@@ -19,12 +19,14 @@
     height: 100%;
     width: 50%;
     float: left;
+    border-radius: 5px;
 }
 .basket_catalog_img img{
     width: 100%;
     height: 100%;
     margin: auto;
     object-fit: cover;
+    border-radius: 5px;
 }
 .basket_catalog_close{
     top: 0px;
@@ -39,6 +41,11 @@
     background-color: var(--text_color);
     color: var(--fifth_color);
     cursor: pointer;
+    opacity: 0.3;
+    transition: all 0.7s ease;
+}
+.basket_catalog_close:hover{
+    opacity: 1;
 }
 .basket_catalog_info_container{
     float: left;

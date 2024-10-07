@@ -2,29 +2,16 @@
     position: relative;
     width: 100%;
     height:auto;
-    /* background: var(--first_color); */
     color: var(--fourth_color);
-    /* margin:20px 7.5% 20px 7.5%; */
     border-radius:20px;
-    /* -webkit-box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3);
-    box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.3); */
 }
 .Catalog{
     color: var(--text_color);
     height: 400px;
-    /* min-width: 28.333%; */
-    /* display: inline-block; */
     text-align: center;
-    /* background: var(--first_color); */
-    /* float: left; */
-    /* border-radius:10px; */
-    /* scroll-snap-align: end; */
     margin: 0 2.5% 0 2.5%;
 }
 .Catalog_h2{
-    /* margin-top: 2.5%;
-    margin-bottom: 2.5%; */
     margin:  2.5% 0 2.5% 0;
     height: 7.5%;
 }
@@ -65,27 +52,27 @@
     margin-bottom: 5%;
     height: 22.5%;
     width: 100%;
-    /* background: var(--first_color); */
-    /* line-height: 15px; */
     border-radius: 10px;
     overflow: hidden;
+    color: var(--text_color);
 }
 .Catalog_Center p{
     text-align: left;
     margin-top: 10px;
     font-style: italic;
-    /* font-weight: bold; */
 }
 /*-------------------------------------------------------------------каталог Niz---------*/
 .Catalog_Niz{
     height: 10%;
     width: 100%;
     float: left;
-    background: var(--fifth_color);
-    color: var(--text_color);
+    /* background-color: var(--fifth_color); */
+    /* background-color: var(--text_color); */
+    /* color: var(--text_color); */
+    color: var(--fifth_color);
     border-radius: 10px;
-    /* line-height: 50px; */
     margin-bottom: 5%;
+    /* border: var(--text_color_3) solid 1px; */
 }
 .Catalog_Niz_Container{
     display: flex;
@@ -93,10 +80,12 @@
     width: 50%;
     height: 100%;
     color: var(--third_color);
-    font-weight: bold;
+    /* color: var(--fifth_color); */
+    /* font-weight: bold; */
     font-size: large;
     align-items: center;
     justify-content: center;
+    font-weight:600;
 }
 .Catalog_Niz_right{
     float: left;
@@ -108,8 +97,9 @@
 }
 .Catalog_Niz_Container span{
     color: var(--text_color);
+    /* color: var(--fifth_color); */
     text-decoration: line-through;
-    text-decoration-color: red;
+    text-decoration-color: var(--third_color);
     margin-right: 10px;
     
 }
@@ -119,7 +109,9 @@
     border-radius: 10px;
     font-size: medium;
     font-weight: bold;
-    background: var(--fourth_color);
+    background-color: var(--fourth_color);
+    /* background-color: var(--fifth_color); */
+    /* color: var(--fourth_color); */
     transition: all 0.7s ease;
     cursor: pointer;
 }

@@ -1,9 +1,29 @@
-.basket_form_h2{
-    color: var(--text_color);
-    margin-bottom: 3vh;
+.basket_form_popup{
+    display: none;
+}
+.basket_form_content{
+    width: 60%;
+    height: auto;
+    margin: 20px 20%;
+    position: absolute;
+    z-index: 3;
+}
+.basket_form_plug{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0.5;
+    background-color: var(--text_color);
+    z-index: 2;
 }
 .basket_form_h3_wrapper{
     display: flex;
+}
+.basket_form_h2{
+    color: var(--text_color);
+    margin-bottom: 1.5vh;
 }
 .basket_form_h3{
     display: flex;
@@ -41,11 +61,10 @@
 .basket_form_wraper{
     display: flex;
     flex-direction: column;
-    width: 60%;
-    margin-left: 20%;
-    padding: 0 2.5% 0 2.5%;
+    width: 100%;
+    padding: 20px 2.5% 20px 2.5%;
     background-color: var(--first_color);
-    margin-bottom: 3vh;
+    margin-bottom: 20px;
     border-top: 1px solid var(--text_color);
     border-bottom: 1px solid var(--text_color);
     border-radius: 10px;
@@ -161,6 +180,40 @@ input[type="radio"]:checked + label{
     border-radius: 5px;
     border: solid var(--third_color ) 2px;
 }
-@media (max-width: 1000px){}
-@media (max-width: 740px){}
-@media (max-width: 450px){}
+.Catalog_Niz_Container.show.basket{
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10% 3vh 10%;
+}
+@media (max-width: 1024px){
+    .container_basket{
+        justify-content: center;
+    }
+    .basket_catalog.menu{
+        width: 70%;
+    }
+    .basket_total_price{
+        margin-top: 0;
+    }
+}
+@media (max-width: 740px){
+    .basket_catalog.menu{
+        width: 100%;
+    }
+}
+@media (max-width: 450px){
+    .basket_catalog_info_container{
+        padding-right: 10%;
+    }
+    .basket_catalog_price_container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .basket_catalog_price{
+        width: 100%;
+    }
+    .basket_count.basket{
+        margin: 5px;
+        width: 70%;
+    }
+}

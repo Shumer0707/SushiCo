@@ -11,7 +11,7 @@
 <body>
     <div class="wrapper" id="wrapper">
         <header class="header" id="header">
-            <div class="header_logo"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>
+            <div class="header_logo"><a href="{{route('promo.index')}}"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></a></div>
             <div class="header_phone">
                 <div class="header_phone_nomer">
                     <span class="header_phone_nomer_text" href="" target="_blank">060000000</span>
@@ -41,9 +41,9 @@
         </header>
         <!--блок меню-->
         <div class="header_menu_sticky">
-            @include('section.lang')
+            <div class="wrapper_lang">@include('section.lang')</div>
             <div class="header_menu_container">
-                <div class="header_menu_logo"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></div>
+                <div class="header_menu_logo"><a href="{{route('promo.index')}}"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></a></div>
                 <div class="header_menu">
                     <div class="header_menu_icon">
                         <span></span>
@@ -63,6 +63,12 @@
                             <a href="/menu/set"><li>{{__('header.sup')}}</li></a>
                             <a href="/menu/set"><li>{{__('header.napitki')}}</li></a>
                         </ul>
+                        <ul class="header_menu_list right">
+                            <a href="{{route('promo.index')}}"><li>{{__('header.home')}}</li></a>
+                            <a href="{{route('contact.index')}}"><li>{{__('header.contacts')}}</li></a>
+                            <li>@include('section.lang')</li>
+                        </ul>
+                        <div class="burger_lang"></div>
                     </nav>
                 </div>
             </div>

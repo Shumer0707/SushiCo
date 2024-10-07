@@ -8,9 +8,11 @@ use Illuminate\Http\Request;
 class PromoController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        $menu = Menu::all();
+        // dd($request->jora);
+        // dd($request->model->where('id', 1));
+        $menu = $request->model;
         $data['menu'] = [$menu];
         return view('static.index')->with($data);
         // return view('static/index')->with('menu', $menu);

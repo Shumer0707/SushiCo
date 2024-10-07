@@ -44,4 +44,9 @@ font-size: 16px;
 .language-selector img:hover {
     transform: scale(1.1);
 }
+@media (max-width: 1024px){
+    .language-selector {
+        top: 15px;
+    }
+}
 </style>

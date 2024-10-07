@@ -21,4 +21,5 @@ return[
     'your_order' => 'Comanda ta',
     'additional' => 'Dorințe suplimentare',
     'payment' => 'Pentru plata',
+    'design' => 'Următorul',
 ];

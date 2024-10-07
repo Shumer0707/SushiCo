@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class StaticController extends Controller
 {
     public function index(){
-        if ( ! isset($_SESSION)) {
+        if (!isset($_SESSION)) {
             $_SESSION['visitor_count'] = 0;
         } else {
             $_SESSION['visitor_count']++;

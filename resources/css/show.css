@@ -2,7 +2,7 @@
 
 .Catalog_menu.show{
     width: 100%;
-    padding: 0 7.5% 2% 7.5%;
+    padding: 0 15% 2% 15%;
     background-image: url("/img/sinsai/sinsai-2.jpg");
     background-size: contain;
     background-color: #221f1fd2;
@@ -39,13 +39,13 @@
     color: var(--fourth_color);
     /* color: var(--text_color_3); */
 }
-.Container_Catalog_Center{
+/* .Container_Catalog_Center{
     align-items: center; 
     justify-content: center;
-}
+} */
 .Catalog_Niz.show{
     height: 10%;
-    margin-bottom: 2.5%;
+    margin-bottom: 0 ;
     background: none;
 }
 .Catalog_Niz_Container.show{
@@ -73,12 +73,12 @@
     height: 40px; 
     margin: 0 20% 0 20%;
     /* background: var(--first_color);  */
-    color: var(--text_color_2);
+    color: var(--text_color);
     float: left;
     font-size: 125%;
     align-items: center;
     justify-content: center;
-    border:1px solid var(--text_color);
+    border:2px solid var(--fifth_color);
     border-radius: 10px;
 }
 .btn_basket.show.beck:hover{
@@ -86,7 +86,12 @@
     color: var(--fifth_color);
     background: var(--fourth_color);
 }
-@media (max-width: 1000px){
+@media (max-width: 1300px){
+    .Catalog_menu.show{
+        padding: 0 7.5% 2% 7.5%;
+    }
+}
+@media (max-width: 1024px){
     .Catalog_Verh.show{
         height: 350px;
     }

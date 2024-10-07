@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Menu;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -20,8 +21,16 @@ class SetLocale
         
         if(Session::has('locale')){
             App::setLocale(Session::get('locale'));
+        }else{
+            Session::put('locale', App::currentLocale());
         }
         
+        if(App::currentLocale() === 'ru'){
+            $model = Menu::all();
+        }else{
+            $model = '';
+        }
+        $request->merge(["model" => $model]);
         return $next($request);
     }
 }

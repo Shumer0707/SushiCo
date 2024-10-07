@@ -2535,6 +2535,8 @@ function sendMain_GET() {
   if (wraper_basket) {
     var route = "/fetch_vieu/wraper_basket/no";
     sendView_GET(route, wraper_basket);
+    var route = "/fetch_vieu/main.order_details/no";
+    sendView_GET(route, order_details);
   }
   var route = "/fetch_vieu/main.mini_basket_catalog_wrapper/no";
   sendView_GET(route, mini_basket_catalog_wrapper);
@@ -2544,8 +2546,6 @@ function sendMain_GET() {
   sendView_GET(route, mini_basket_batton_all_price_wraper);
   var route = "/fetch_vieu/main.all_price_wrapper/no";
   sendView_GET(route, all_price_wrapper);
-  var route = "/fetch_vieu/main.order_details/no";
-  sendView_GET(route, order_details);
 }
 function close_and_countClick(e) {
   countClick(e);
@@ -2619,20 +2619,23 @@ function _sendView_GET() {
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
-          _context2.next = 2;
-          return fetch(route).then(function (res) {
+          fetch(route).then(function (res) {
             if (!res.ok) {
               console.log('Problem');
               return;
             }
             return res.text();
           }).then(function (data) {
+            if (element.length > 1) {
+              element.forEach(function (e) {
+                e.innerHTML = data;
+              });
+            }
             element.innerHTML = data;
-            // console.log(data);
           })["catch"](function (error) {
             console.log(error);
           });
-        case 2:
+        case 1:
         case "end":
           return _context2.stop();
       }
@@ -2672,7 +2675,7 @@ function _sendData_GET() {
 ;
 function sendVieuMenu_GET(id) {
   if (catalog) {
-    var catalog_niz_right = document.querySelector("#catalog_niz_right_".concat(id));
+    var catalog_niz_right = document.querySelectorAll("#catalog_niz_right_".concat(id));
     var route = "/fetch_vieu/main.catalog/".concat(id);
     sendView_GET(route, catalog_niz_right);
   }

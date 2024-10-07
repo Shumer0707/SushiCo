@@ -1,4 +1,9 @@
-
+.info_main.cont{
+    background-image: url("/img/sinsai/sinsai-8.jpg");
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color:var(--first_color);
+}
 .info.cont{
     margin-bottom: 2%;
 }

@@ -21,7 +21,6 @@
 </div>
 <div class="info_main">
 <h1>{{__('home.h1')}}</h1>
-{{-- @dd($menu[0]) --}}
 <div class="Catalog_main" id="Акция">
     <div class="swiper Swiper_menu">
         <div class="swiper-wrapper">
@@ -73,8 +72,8 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
 </div>
-
-    <div class="info left"><img src="img\info\rolli-1.jpg" alt="1"></div>
+@include('section_index.menu')
+{{-- <div class="info left"><img src="img\info\rolli-1.jpg" alt="1"></div>
     <div class="info right text">
         <div class="info_h">
             <h2>{{__('home.info1_1')}}
@@ -90,12 +89,6 @@
             <br/>{{__('home.info2_2')}}
             </h2>
         </div>
-    </div>
-</div>
-{{-- <div class="test">
-    <div class="test_p"><p>Test p</p></div>
-    <div class="test_span"><span>Test span</span>
-        <a href="basket/{{$el->id}}/edit"><button class="btn_basket">Добавить <i class="fa-solid fa-basket-shopping"></i></button></a>
     </div>
 </div> --}}
 @endsection
