@@ -22,6 +22,7 @@
 <div class="info_main">
 <h1>{{__('home.h1')}}</h1>
 <div class="Catalog_main" id="Акция">
+    @isset($menu)
     <div class="swiper Swiper_menu">
         <div class="swiper-wrapper">
             @foreach($menu[0] as $el)
@@ -32,12 +33,16 @@
                     </div>
                     <div class="Catalog_Verh">
                         <div class="photo">
-                            <a href="menu/show/{{$el->id}}"><img src="/img/menu/{{$el->img}}" alt="Акция" class="cover"></a>
+                            <a href="menu/show/{{$el->id}}"><img src={{asset("storage/$el->img")}} alt="Акция" class="cover"></a>
                         </div>
                     </div>
                     <div class="Catalog_Center">
                         <p class="weight_menu">{{$el->gram}}</p>
-                        <p>{{$el->short_description}}</p>
+                        @if(app()->getLocale() == 'ru')
+                            <p>{{$el->description_ru}}</p>
+                        @elseif(app()->getLocale() == 'ro')
+                            <p>{{$el->description_ro}}</p>   
+                        @endif
                     </div>
                     <div class="Catalog_Niz">
                         <div class="Catalog_Niz_Container"><span>{{$el->price + ($el->price / 10)}}</span>{{$el->price}} MDL</div>
@@ -71,26 +76,9 @@
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
+    @endisset
 </div>
 @include('section_index.menu')
-{{-- <div class="info left"><img src="img\info\rolli-1.jpg" alt="1"></div>
-    <div class="info right text">
-        <div class="info_h">
-            <h2>{{__('home.info1_1')}}
-                <br/>{{__('home.info1_2')}}
-                <br/>{{__('home.info1_3')}}
-            </h2>
-        </div>
-    </div>
-    <div class="info right"><img src="img\info\man-1.jpg" alt="1"></div>
-    <div class="info left text" >
-        <div class="info_h">
-            <h2>{{__('home.info2_1')}}
-            <br/>{{__('home.info2_2')}}
-            </h2>
-        </div>
-    </div>
-</div> --}}
 @endsection
 
 

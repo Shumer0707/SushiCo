@@ -11,12 +11,13 @@ class MenuController extends Controller
 
     public function index($category='')
     {
-        $menu=DB::table('menus')->where('category', $category)->get();
+        $menu = Menu::where('category', $category)->get();
         return view('static.menu')->with('menu',$menu)->with('category',$category);
     }
 
     public function show($id){
         $menu = Menu::where('id', $id)->get();
+        // dd($menu[0]->ingr);
         return view('static.show')->with('menu',$menu);
     }
 }

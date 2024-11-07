@@ -25,12 +25,13 @@ class SetLocale
             Session::put('locale', App::currentLocale());
         }
         
-        if(App::currentLocale() === 'ru'){
-            $model = Menu::all();
-        }else{
-            $model = '';
-        }
-        $request->merge(["model" => $model]);
+        // if(App::currentLocale() === 'ru'){
+        //     $model = Menu::all();
+        // }else{
+        //     $model = '';
+        // }
+        // $request->merge(["model" => $model]);
+        // return $next($request);
         return $next($request);
     }
 }

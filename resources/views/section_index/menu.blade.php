@@ -7,10 +7,14 @@
                     <div class="Catalog_h3">
                         <h3>{{$el->title}}</h3>
                     </div>
-                    <div class="Catalog_Verh"><a href="/menu/show/{{$el->id}}"><img src="/img/menu/{{$el->img}}" alt="Кортинка меню" class="cover"></a></div>
+                    <div class="Catalog_Verh"><a href="/menu/show/{{$el->id}}"><img src={{asset("storage/$el->img")}} alt="Кортинка меню" class="cover"></a></div>
                     <div class="Catalog_Center">
                         <p>{{$el->gram}}</p>
-                        <p>{{$el->short_description}}</p>
+                        @if(app()->getLocale() == 'ru')
+                            <p>{{$el->description_ru}}</p>
+                        @elseif(app()->getLocale() == 'ro')
+                            <p>{{$el->description_ro}}</p>   
+                        @endif
                     </div>
                     <div class="Catalog_Niz">
                         <div class="Catalog_Niz_Container">{{$el->price}} MDL</div>

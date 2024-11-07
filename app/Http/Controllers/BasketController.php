@@ -1,15 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Mail\FormMail;
-use App\Mail\OrderMail;
 use App\Models\Menu;
-use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Mail;
 
 class BasketController extends Controller
 {
@@ -79,6 +71,10 @@ class BasketController extends Controller
             
             if($_SESSION['all_price'] == 0){
                 unset($_SESSION['all_price']);
+            }else{
+                if($_SESSION['all_price'] < config('my_config.del_min_sum')){
+                    $_SESSION['all_price'] = $_SESSION['all_price'] + config('my_config.del_price');
+                }
             }
         }
     }
@@ -91,17 +87,17 @@ class BasketController extends Controller
         }
     }
     public function test(){
-        // Mail::to('shumer0707@mail.ru')->send(new OrderMail('ok'));
-        // dd('ok');
-        // function all_view(){
-        //     $arr = ['fetch.basket.test', 'fetch.basket.fetch_post'];
-        //     foreach($arr as $el){
-        //         return view($el);
-        //     }  
-        // }
-        // $ARR[] = all_view();
-        // return $ARR;
-        return view('mail.order');
+        foreach ($_SESSION['prod'] as $key => $value) {
+            $items[] = [
+            'title' => Menu::where('id',$key)->select('title')->get()->toArray()[0]['title'],
+            'price' => Menu::where('id',$key)->select('price')->get()->toArray()[0]['price'],
+            'count' => $value,
+            'all_price' => Menu::where('id', $key)->select('price')->get()->toArray()[0]['price']*$value
+            ];
+            $items = collect($items);
+        };
+        dd($items);
+        // return (new OrderMail('q'))->render();
     }
 }
 

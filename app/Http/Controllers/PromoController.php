@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 class PromoController extends Controller
@@ -12,7 +13,7 @@ class PromoController extends Controller
     {
         // dd($request->jora);
         // dd($request->model->where('id', 1));
-        $menu = $request->model;
+        $menu = Menu::all();
         $data['menu'] = [$menu];
         return view('static.index')->with($data);
         // return view('static/index')->with('menu', $menu);

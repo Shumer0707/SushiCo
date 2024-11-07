@@ -11,11 +11,18 @@
                 <div class="Catalog_h2 show">
                     <h2>{{$el->title}}</h2>
                 </div>
-                <div class="Catalog_Verh show"><img src="/img/menu/{{$el->img}}" alt="Кортинка меню" class="cover"></div>
+                <div class="Catalog_Verh show"><img src={{asset("storage/$el->img")}} alt="{{$el->title}}" class="cover"></div>
                 <div class="Catalog_Center show">
                     <div class="Container_Catalog_Center show">
                         <p>{{$el->gram}}</p>
-                        <p>{{$el->ingr_1}}</p><p>{{$el->ingr_2}}</p><p>{{$el->ingr_3}}</p><p>{{$el->ingr_4}}</p><p>{{$el->ingr_5}}</p><p></p>
+                        @foreach ($el->ingr()->orderBy('text_ru', 'asc')->get() as $ingr)
+                            @if(app()->getLocale() == 'ru')
+                                <p>{{$ingr->text_ru}}</p>
+                            @elseif(app()->getLocale() == 'ro')
+                                <p>{{$ingr->text_ro}}</p>   
+                            @endif
+                        @endforeach
+        {{-- <p>{{$el->ingr_1}}</p><p>{{$el->ingr_2}}</p><p>{{$el->ingr_3}}</p><p>{{$el->ingr_4}}</p><p>{{$el->ingr_5}}</p><p></p> --}}
                     </div>
                 </div>
                 <div class="Catalog_Niz show">

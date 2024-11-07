@@ -88,9 +88,11 @@ const { forEach } = require("lodash");
             if(element.length > 1){
                 element.forEach(function(e){
                     e.innerHTML = data;
+                    // console.log(data);
                 });
             }
             element.innerHTML = data;
+            // console.log(data);
         })
         .catch((error => {
             console.log(error);

@@ -34,7 +34,7 @@
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                     <div class="mini_basket_catalog_img">
-                        <img src="/img/menu/{{$el->img}}" alt="{{$el->id}}">
+                        <img src={{asset("storage/$el->img")}} alt="{{$el->id}}">
                     </div>
                     <div class="mini_basket_catalog_info_container">
                         <div class="mini_basket_catalog_title"><h5>{{$el->title}}</h5></div>

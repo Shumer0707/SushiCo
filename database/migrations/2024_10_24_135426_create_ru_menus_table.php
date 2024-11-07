@@ -8,30 +8,25 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->string("title");
-            $table->string("count");
-            $table->mediumText("ingredient");
+            $table->string('description_ru');
+            $table->string('description_ro');
             $table->string("gram");
             $table->integer("price");
             $table->string("category");
             $table->string("img");
-            $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('menus');
     }

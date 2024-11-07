@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class FormBasketRequest extends FormRequest
@@ -28,9 +29,14 @@ class FormBasketRequest extends FormRequest
             'email' => 'required|email:rfc,dns',
             'phone' => 'required|confirmed|min:6|max:10',
             'logistics' => 'required',
-            'address' => 'bail|required_unless:logistics,=,self_pickup',
+            'address' => 'bail|required_unless:logistics,self_pickup',
+            'building' => 'required',
             'details' => 'max:200',
             'payment' => 'required|max:100',
+            'address_home' => 'bail|required_unless:logistics,self_pickup|integer',
+            'address_apartment' => 'bail|integer',Rule::requiredIf(function(){
+                return 'building' === 'house' || 'logistics' === 'self_pickup';
+            }),                  
         ];
     }
 }

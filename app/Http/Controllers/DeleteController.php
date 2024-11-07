@@ -10,7 +10,7 @@ class DeleteController extends Controller
     public function index()
     {
         session_destroy();
-        return redirect('/');
+        return redirect(route('basket.index'));
     }
 
     public function sesion()

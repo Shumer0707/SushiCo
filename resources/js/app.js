@@ -5,3 +5,5 @@ require('./basket_up');
 require('./fetch');
 require('./basket_form');
 require('./language');
+require('./view_basket_form');
+require('./succes_order_basket');

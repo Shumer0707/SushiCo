@@ -8,3 +8,7 @@
 .success{
     border: solid var(--text_color_2) 2px;
 }
+/* .display_none_popup{
+    display: none;
+    opacity: 0;
+} */

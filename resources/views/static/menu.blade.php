@@ -14,7 +14,7 @@
                         <div class="Catalog_h2">
                             <h2>{{$el->title}}</h2>
                         </div>
-                        <div class="Catalog_Verh"><a href="/menu/show/{{$el->id}}"><img src="/img/menu/{{$el->img}}" alt="Кортинка меню" class="cover"></a></div>
+                        <div class="Catalog_Verh"><a href="storage/{{$el->id}}"><img src="/img/menu/{{$el->img}}" alt="Кортинка меню" class="cover"></a></div>
                         <div class="Catalog_Center">
                             <p>{{$el->gram}}</p>
                             <p>{{$el->short_description}}</p>

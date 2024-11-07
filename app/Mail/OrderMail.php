@@ -2,27 +2,30 @@
 
 namespace App\Mail;
 
+use App\Models\Menu;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Storage;
 
 class OrderMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     private $data;
+    private $items;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(private $message)
+    public function __construct($data, $items)
     {
-        // $this->message = $message;
-        $this->data = $message;
+        $this->data = $data;
+        $this->items = $items;
     }
 
     /**
@@ -33,7 +36,7 @@ class OrderMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Order Mail',
+            subject: 'Ваш заказ обрабатывается !',
         );
     }
 
@@ -45,7 +48,7 @@ class OrderMail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'mail.order', with:['data' => $this->data],
+            view: 'mail.order', with:['data' => $this->data, 'items' => $this->items],
         );
     }
 

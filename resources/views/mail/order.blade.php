@@ -7,71 +7,145 @@
 </head>
 <body>
     <style>
-        .mail_wrapper{
-    
-        }
-        .mail_container{
-            border: solid #34302f 1px;
-            border-radius: 10px;
-            background-color: #d3cdcd;
-            float: left;
-            width: 40%;
-            margin: 10px;
+        .table{
+            width: 50%;
+            margin: auto;
+            /* background-color: azure; */
             padding: 10px;
         }
-        .mail{
+        table{
+            width: 100%;
+            border: red solid 1px;
+            table-layout: fixed;
+        }
+        th, td{
+            padding: 10px;
+            width: 25%;
+            max-width: 50%;
+            align-items: center;
+            text-align: center;
+            border: silver solid 1px;
+            word-wrap: break-word;
+
+        }
+        .header{
+            width: 100%;
+            /* height: 100px; */
+        }
+        .img{
             width: 50%;
+            height: auto;
+        }
+        .img img{
+            object-fit:contain;
+            width: 100%;
+            height: auto;
             float: left;
         }
-        .mail.items{
-            width: 33%;
+        .img.dawn{
+            margin-top: 20px;
+        }
+        .order_h{
+            text-align: center;
+            width: 50%; 
         }
     </style>
-    <div class="mail_wrapper">
-        <div class="mail_container">
-            <h2>Данные клиента</h2>
-            <div class="mail"><h4>Имя:</h4></div> <div class="mail"><h4>{{$data['username']}}</h4></div>
-            <div class="mail"><h4>Мыло:</h4></div> <div class="mail"><h4>{{$data['email']}}</h4></div>
-            <div class="mail"><h4>Телефон:</h4></div> <div class="mail"><h4>{{$data['phone']}}</h4></div>
-            <div class="mail"><h4>Доставка:</h4></div> <div class="mail"><h4>{{$data['logistics']}}</h4></div>
-            <div class="mail"><h4>Адрес:</h4></div> <div class="mail"><h4>{{$data['address']}}</h4></div>
-            <div class="mail"><h4>Оплата:</h4></div> <div class="mail"><h4>{{$data['payment']}}</h4></div>
-            <div class="mail"><h4>Детали:</h4></div> <div class="mail"><h4>{{$data['details']}}</h4></div>
+    <div class="table">
+        <div class="header"> 
+            <div class="img"><img src="" alt="logo"></div>
+            <div class="order_h"><h2>食欲旺盛</h2></div>
         </div>
-        <div class="mail_container">
-            <h2>Данные заказа</h2>
-            @foreach($basket as $el => $val)
-                <div class="order_details_container">
-                    <div class="mail items"><h4>{{$val->title}}<h4></div>
-                    <div class="mail items"><h4>x{{$_SESSION['prod'][$val->id]}}<h4></div>
-                    <div class="mail items"><h4>{{$val->price * $_SESSION['prod'][$val->id]}}.0MDL<h4></div>
-                </div>
+        <div><h1>Благодарим за покупку!</h1></div>
+        <p>Ваш заказ был принят и сейчас находится в обработке. Ожидайте звонок.</p>
+        <p>Информация о заказе приведена ниже:</p>
+        <h2>Заказ #1 (01.10.2024)</h2>
+        <table class="table_1">
+            <tr>
+                <th>Товар</th>
+                <th>Количество</th>
+                <th>Цена шт.</th>
+                <th>Итог</th>
+            </tr>
+            @foreach ($items as $el)
+                <tr>
+                    <td>{{$el['title']}}</td>
+                    <td>{{$el['count']}}</td>
+                    <td>{{$el['price']}}</td>
+                    <td>{{$el['all_price']}}</td>
+                </tr>
             @endforeach
-            @if ($_SESSION['all_price'] < config('my_config.del_min_sum')) 
-                    <div class="order_details_container">
-                        <div class="mail items"><h4>Доставка<h4></div>
-                        <div class="mail items"><h4>--<h4></div>
-                        <div class="mail items"><h4>50.0MDL<h4></div>
-                    </div>
-                    <div class="order_details_container">
-                        <div class="mail items"><h4><h4></div>
-                        <div class="mail items"><h4>Всего:<h4></div>
-                        <div class="mail items"><h4>{{$_SESSION['all_price'] + config('my_config.del_price')}}.0MDL<h4></div>
-                    </div>
+            @if(isset($data['address']))
+                <tr>
+                    <td>Доставка</td>
+                    <td>-</td>
+                    <td>-</td>
+                    @if ($_SESSION['all_price'] < config('my_config.del_min_sum'))
+                        <th>{{config('my_config.del_price')}}</th>
+                    @else
+                        <th>0</th>
+                    @endif
+                </tr>
+            @endif
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Всего</th>
+                <th>{{$_SESSION['all_price']}}</th>
+            </tr>
+        </table>
+        <p></p>
+        <h2>Данные закзчика</h2>
+        <table class="table_2">
+            <tr>
+                <th>Дополнительный пожелания:</th>
+                @if (isset($data['details']))
+                    <td>{{$data['details']}}</td>
                 @else
-                    <div class="order_details_container">
-                        <div class="mail items"><h4>Доставка<h4></div>
-                        <div class="mail items"><h4>--<h4></div>
-                        <div class="mail items"><h4>0.0MDL<h4></div>
-                    </div>
-                    <div class="order_details_container">
-                        <div class="mail items"><h4><h4></div>
-                        <div class="mail items"><h4>Всего:<h4></div>
-                        <div class="mail items"><h4>{{$_SESSION['all_price']}}.0MDL<h4></div>
-                    </div>
+                    <td>-</td>
                 @endif
-        </div>
+                
+            </tr>
+            <tr>
+                <th>Доставка:</th>
+                <td>{{$data['logistics']}}</td>
+            </tr>
+            @if(isset($data['address']))
+                <tr>
+                    <th>Адрес:</th>
+                    @if(isset($data['address_apartment']))
+                        <td>{{$data['address']}} {{$data['address_home']}} ap.{{$data['address_apartment']}}</td>
+                    @else
+                        <td>{{$data['address']}} {{$data['address_home']}}</td>
+                    @endif
+                </tr>  
+                <tr>
+                    <th>-</th>
+                    <td>{{$data['building']}}</td>
+                </tr> 
+            @endif
+            <tr>
+                <th>Способ оплаты:</th>
+                <td>{{$data['payment']}}</td>
+            </tr>
+            <tr>
+                <th>Имя:</th>
+                <td>{{$data['username']}}</td>
+            </tr>
+            <tr>
+                <th>Емайл:</th>
+                <td>{{$data['email']}}</td>
+            </tr>
+            <tr>
+                <th>Телефон:</th>
+                <td>{{$data['phone']}}</td>
+            </tr>
+        </table>
+        
+        <p><i>В случае <b>ошибки или возникновения каких либо вопросов</b> просим звонить по номерам указанным ниже:</i></p>
+        <i>0700000000 0600000000</i>
+        <div class="header">
+            <div class="img dawn"><img src="" alt="logo"></div>
+        </div> 
     </div>
 </body>
 </html>
-
