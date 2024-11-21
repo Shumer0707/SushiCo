@@ -25,7 +25,7 @@
     @isset($menu)
     <div class="swiper Swiper_menu">
         <div class="swiper-wrapper">
-            @foreach($menu[0] as $el)
+            @foreach($menu as $el)
             <div class="swiper-slide">
                 <div id="catalog" class="Catalog">
                     <div class="Catalog_h2">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="Catalog_Center">
-                        <p class="weight_menu">{{$el->gram}}</p>
+                        <p class="weight_menu">{{$el->gram}} {{__('menu.gram')}}</p>
                         @if(app()->getLocale() == 'ru')
                             <p>{{$el->description_ru}}</p>
                         @elseif(app()->getLocale() == 'ro')
@@ -71,14 +71,13 @@
                 </div>
             </div>
             @endforeach
-            
         </div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     @endisset
 </div>
-@include('section_index.menu')
+@include('section_index.menu');
 @endsection
 
 

@@ -1,20 +1,32 @@
 /*-------------------------------------------------------------------каталог Меню---------*/
+#wraper_catalog_menu{
+    width: 100%;
+}
 .container_menu{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     padding: 0 5.5% 2% 5.5%;
-    background-image: url("/img/sinsai/sinsai-16.jpg");
-    background-size: cover;
+    /* background-image: url("/img/sinsai/sinsai-16.jpg"); */
+    /* background-size: cover; */
     background-color:var(--first_color);
-    background-blend-mode: overlay;
+    /* background-blend-mode: overlay; */
     float: left;
     /* opacity: 0.5; */
     /* border: var(--fifth_color) solid 1px; */
     border-radius: 10px;
+    -webkit-box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
 }
-.container_menu h1{
+.container_menu h1, h2{
     width: 100%;
+    padding: 10px;
+}
+.container_menu_h2{
+    float: left;
+    width: 100%;
+    color: var(--text_color);
 }
 .Catalog_h3{
     margin: 2.5% 0 2.5% 0;
@@ -31,6 +43,9 @@
 .Catalog_Niz_Container form{
     height: 100%;
     width: 100%;
+}
+#set,#uramaki,#hosomaki,#tempura,#nigiri,#gunkane,#sashimi,#wakame,#noodles,#rice,#sup,#drink{
+    scroll-margin-top: 70px;
 }
 @media (max-width: 1024px){
     .Сatalog_menu{
@@ -56,7 +71,7 @@
     }
     .Catalog_h3{
         height: 22%;
-        padding: 10px 0 10px 0; 
+        padding: 10px 0 10px 0;
         margin: 0;
     }
     .Сatalog_menu .Catalog_Verh{

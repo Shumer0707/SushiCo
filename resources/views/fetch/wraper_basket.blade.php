@@ -1,10 +1,9 @@
-
 @if(!isset($_SESSION['count'] ))
     <h1>{{__('basket.h1_empty')}}</h1>
 @else
     <h1>{{__('basket.h1_full')}}</h1>
 <div class="container_basket">
-    <div class="container_basket_items">   
+    <div class="container_basket_items">
         @if(isset($basket))
             @foreach($basket as $el => $val)
                 <div class="basket_catalog menu">
@@ -12,7 +11,7 @@
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                     <div class="basket_catalog_img">
-                        <img src="/img/menu/{{$val->img}}" alt="{{$val->id}}">
+                        <img src={{asset("storage/$val->img")}} alt="{{$val->id}}">
                     </div>
                     <div class="basket_catalog_info_container">
                         <div class="basket_catalog_title"><h3>{{$val->title}}</h3></div>
@@ -44,8 +43,8 @@
                 {{-- </div> --}}
             </div>
             {{-- <div class="basket_total_price"><h2>{{__('basket.total')}}: {{$_SESSION['all_price']}} MDL</h2></div> --}}
-        @endisset  
-    </div> 
+        @endisset
+    </div>
     <div class="container_basket_result">
         <div class="basket_result">
             <div  class="basket_order_details">
@@ -61,7 +60,7 @@
                     <div class="order_details_container">
                         <div class="order_details left">{{__('basket.delivary')}}</div>
                         <div class="order_details center">--</div>
-                        @if ($_SESSION['all_price'] < config('my_config.del_min_sum')) 
+                        @if ($_SESSION['all_price'] < config('my_config.del_min_sum'))
                         <div class="order_details right">50 MDL</div>
                         @else
                         <div class="order_details right">0 MDL</div>
@@ -76,7 +75,7 @@
                 <button id="out_form" class="btn_basket mini">{{__('basket.place_order')}}</button>
             </div>
         </div>
-        
+
     </div>
 </div>
 @endif

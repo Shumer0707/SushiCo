@@ -1,10 +1,9 @@
-@extends('layout/main')
+{{-- @extends('layout/main')
 
 @section('title')
     Меню
 @endsection
 @section('content')
-    <!--Коталог Акция------------------------------------------------------------------------------------------>
     <div class="container_menu">
         <h1>{{__('menu.menu')}} : {{$category}}</h1>
         @if($menu != '')
@@ -37,19 +36,10 @@
                                     </button>
                                 </div>
                                 @else
-                                {{-- <a href={{route('basket.add_to_basket', $el->id)}}> --}}
                                     <button id="add_btn" class="btn_basket" value="{{$el->id}}" name="plus">
                                         {{__('menu.add')}} <i class="fa-solid fa-basket-shopping"></i>
                                     </button>
-                                {{-- </a> --}}
                                 @endif
-                                    
-                                {{-- @endif --}}
-                                    {{-- <form method="POST" action="/basket/store">@csrf
-                                        <input type="hidden" name="id" value="{{$el->id}}">
-                                        <button class="btn_basket">Добавить <i class="fa-solid fa-basket-shopping"></i></button>
-                                    </form> --}}
-        {{--                                <a href="/basket/store"/><button class="btn_basket">Добавить <i class="fa-solid fa-basket-shopping"></i></button></a>--}}
                             </div>
                         </div>
                     </div>
@@ -57,4 +47,4 @@
             </div>
         @endif
     </div>
-@endsection
+@endsection --}}

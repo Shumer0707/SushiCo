@@ -1,19 +1,20 @@
-<div class="container_menu">
-    {{-- <h1>{{__('menu.menu')}} : {{$category}}</h1> --}}
-    @if($menu != '')
+
+@foreach($menu_category as $cat)
+    <div class="container_menu_h2" id="{{$cat}}"><h2>{{__("menu.$cat")}}</h2></div>
+    <div class="container_menu">
         <div id="wraper_catalog_menu">
-            @foreach($menu[0] as $el)
+            @foreach($menu->where('category', $cat) as $el)
                 <div id="catalog" class="Сatalog_menu" id="{{$el->id}}">
                     <div class="Catalog_h3">
                         <h3>{{$el->title}}</h3>
                     </div>
-                    <div class="Catalog_Verh"><a href="/menu/show/{{$el->id}}"><img src={{asset("storage/$el->img")}} alt="Кортинка меню" class="cover"></a></div>
+                    <div class="Catalog_Verh"><a href="/menu/show/{{$el->id}}"><img src={{asset("storage/$el->img")}} alt="Картинка меню" class="cover"></a></div>
                     <div class="Catalog_Center">
-                        <p>{{$el->gram}}</p>
+                        <p>{{$el->gram}} {{__('menu.gram')}}</p>
                         @if(app()->getLocale() == 'ru')
                             <p>{{$el->description_ru}}</p>
                         @elseif(app()->getLocale() == 'ro')
-                            <p>{{$el->description_ro}}</p>   
+                            <p>{{$el->description_ro}}</p>
                         @endif
                     </div>
                     <div class="Catalog_Niz">
@@ -37,11 +38,11 @@
                                 <button id="add_btn" class="btn_basket" value="{{$el->id}}" name="plus">
                                     {{__('menu.add')}} <i class="fa-solid fa-basket-shopping"></i>
                                 </button>
-                            @endif 
+                            @endif
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
-    @endif
-</div>
+    </div>
+@endforeach

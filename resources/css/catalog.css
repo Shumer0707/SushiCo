@@ -49,6 +49,7 @@
 }
 /*-------------------------------------------------------------------каталог Center---------*/
 .Catalog_Center{
+    padding: 0 10px;
     margin-bottom: 5%;
     height: 22.5%;
     width: 100%;
@@ -58,8 +59,9 @@
 }
 .Catalog_Center p{
     text-align: left;
-    margin-top: 10px;
+    margin: 0px;
     font-style: italic;
+    font-size: 12px;
 }
 /*-------------------------------------------------------------------каталог Niz---------*/
 .Catalog_Niz{
@@ -84,7 +86,7 @@
     /* font-weight: bold; */
     font-size: large;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     font-weight:600;
 }
 .Catalog_Niz_right{

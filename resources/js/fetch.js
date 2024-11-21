@@ -10,12 +10,12 @@ const { forEach } = require("lodash");
     const catalog = document.querySelector('#catalog');
     const block = document.querySelector('#block');
     const targets = ["count_btn", "close_btn", "add_btn"];
-    
+
     function sendMain_GET(){
         if(wraper_basket){
             var route = `/fetch_vieu/wraper_basket/no`;
             sendView_GET(route, wraper_basket);
-            var route = `/fetch_vieu/main.order_details/no`;
+            var route = `/fetch_vieu/main/order_details/no`;
             sendView_GET(route, order_details);
         }
         var route = `/fetch_vieu/main.mini_basket_catalog_wrapper/no`;
@@ -46,9 +46,9 @@ const { forEach } = require("lodash");
                 // console.log('Время выполнения = ' + time);
                 block.classList.add('display_none');
             }
-            
+
         });
-        
+
     }
     function countClick(e){
         if(e.target.id == 'count_btn'){
@@ -88,11 +88,11 @@ const { forEach } = require("lodash");
             if(element.length > 1){
                 element.forEach(function(e){
                     e.innerHTML = data;
-                    // console.log(data);
+                    console.log(data);
                 });
             }
             element.innerHTML = data;
-            // console.log(data);
+            console.log(data);
         })
         .catch((error => {
             console.log(error);
@@ -119,7 +119,7 @@ const { forEach } = require("lodash");
             let catalog_niz_right = document.querySelectorAll(`#catalog_niz_right_${id}`);
             let route = `/fetch_vieu/main.catalog/${id}`;
             sendView_GET(route, catalog_niz_right)
-            
+
         }
     }
 
@@ -155,7 +155,7 @@ const { forEach } = require("lodash");
     //             "X-CSRF-Token": csrf
     //         },
     //         body: JSON.stringify({'1':'test'}),
-            
+
     //     })
     //     .then(res => {
     //         if(!res.ok){
@@ -165,7 +165,7 @@ const { forEach } = require("lodash");
     //         return res.json();
     //     })
     //     .then(data => {
-            
+
     //         console.log(data);
     //         var result = JSON.stringify(data);
     //         console.log(result);
@@ -173,7 +173,7 @@ const { forEach } = require("lodash");
     //     })
     //     .catch((error => {
     //         console.log(error);
-    //     }));   
+    //     }));
     // };
 
  // if(basket_catalog_close){

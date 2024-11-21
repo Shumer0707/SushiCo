@@ -2,5 +2,19 @@
 return[
     'menu' => 'Meniu',
     'add' => 'Adăuga',
-    'back' => 'Spate'
+    'back' => 'Spate',
+    'gram' => 'gram',
+    'wt' => 'Greutate',
+    'set' => 'SETURI',
+    'uramaki' => 'URAMAKI',
+    'hosomaki' => 'HOSOMAKI',
+    'tempura' => 'TEMPURA',
+    'nigiri' => 'NIGIRI',
+    'gunkane' => 'GUNKAN',
+    'sashimi' => 'SASHIMI',
+    'wakame' => 'WAKAME',
+    'noodles' => 'FIDEI',
+    'rice' => 'OREZ',
+    'sup' => 'SUPE',
+    'drink' => 'BĂUTURI',
 ];

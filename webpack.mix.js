@@ -11,8 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-// mix.js('resources/js/home.js', 'public/js')
-// mix.js('resources/js/swiper.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-    ]);
+mix .js('resources/js/app.js', 'public/js')       // Сборка JavaScript
+    .css('resources/css/app.css', 'public/css/app.css')    // Компиляция простого CSS
+    .sass('resources/sass/app.scss', 'public/css/app-sass.css') // Компиляция SCSS
+    .version(); 

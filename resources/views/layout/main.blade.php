@@ -8,7 +8,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
 </head>
-<body>
+<body class="prevent-scroll">
     <div class="wrapper" id="wrapper">
         <header class="header" id="header">
             <div class="header_logo"><a href="{{route('promo.index')}}"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></a></div>
@@ -33,7 +33,7 @@
                                 <span class="all_price">00.0 MDL</span>
                             @endif
                         </div>
-                    </button>   
+                    </button>
                 </a>
                 <a href="{{route('contact.index')}}"><button class="button contacti">{{__('header.contacts')}}</button></a>
                 <a href="{{route('promo.index')}}"><button class="button home">{{__('header.home')}}</button></a>
@@ -50,18 +50,18 @@
                     </div>
                     <nav class="header_menu_body" id="header_menu_body">
                         <ul class="header_menu_list">
-                            <a href="/menu/set"><li>{{__('header.set')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.nigiri')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.guncan')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.hosomaki')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.uramaki')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.tempura')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.sashimi')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.sunomon')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.lapsha')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.ris')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.sup')}}</li></a>
-                            <a href="/menu/set"><li>{{__('header.napitki')}}</li></a>
+                            <a href="/#set"><li>{{__('header.set')}}</li></a>
+                            <a href="/#uramaki"><li>{{__('header.uramaki')}}</li></a>
+                            <a href="/#hosomaki"><li>{{__('header.hosomaki')}}</li></a>
+                            <a href="/#tempura"><li>{{__('header.tempura')}}</li></a>
+                            <a href="/#nigiri"><li>{{__('header.nigiri')}}</li></a>
+                            <a href="/#gunkane"><li>{{__('header.guncan')}}</li></a>
+                            <a href="/#sashimi"><li>{{__('header.sashimi')}}</li></a>
+                            <a href="/#wakame"><li>{{__('header.sunomon')}}</li></a>
+                            <a href="/#noodles"><li>{{__('header.lapsha')}}</li></a>
+                            <a href="/#rice"><li>{{__('header.ris')}}</li></a>
+                            <a href="/#sup"><li>{{__('header.sup')}}</li></a>
+                            <a href="/#drink"><li>{{__('header.napitki')}}</li></a>
                         </ul>
                         <ul class="header_menu_list right">
                             <a href="{{route('promo.index')}}"><li>{{__('header.home')}}</li></a>
