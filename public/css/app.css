@@ -1877,7 +1877,7 @@ html,
     overflow: hidden;
 } */
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
     height: 100%;

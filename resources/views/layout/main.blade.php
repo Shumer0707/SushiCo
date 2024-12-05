@@ -7,8 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+    <script async src="/js/start.js"></script>
 </head>
-<body class="prevent-scroll">
+<body class="">
     <div class="wrapper" id="wrapper">
         <header class="header" id="header">
             <div class="header_logo"><a href="{{route('promo.index')}}"><img src="/img/Logo1.jpg" alt="Sushico Логотип"></a></div>

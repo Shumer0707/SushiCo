@@ -5166,28 +5166,28 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
+/***/ "./resources/js/app/app.js":
+/*!*********************************!*\
+  !*** ./resources/js/app/app.js ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-__webpack_require__(/*! ./swiper */ "./resources/js/swiper.js");
-__webpack_require__(/*! ./burger */ "./resources/js/burger.js");
-__webpack_require__(/*! ./basket_up */ "./resources/js/basket_up.js");
-__webpack_require__(/*! ./fetch */ "./resources/js/fetch.js");
-__webpack_require__(/*! ./basket_form */ "./resources/js/basket_form.js");
-__webpack_require__(/*! ./language */ "./resources/js/language.js");
-__webpack_require__(/*! ./view_basket_form */ "./resources/js/view_basket_form.js");
-__webpack_require__(/*! ./scroll */ "./resources/js/scroll.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/app/bootstrap.js");
+__webpack_require__(/*! ./swiper */ "./resources/js/app/swiper.js");
+__webpack_require__(/*! ./burger */ "./resources/js/app/burger.js");
+__webpack_require__(/*! ./basket_up */ "./resources/js/app/basket_up.js");
+__webpack_require__(/*! ./fetch */ "./resources/js/app/fetch.js");
+__webpack_require__(/*! ./basket_form */ "./resources/js/app/basket_form.js");
+__webpack_require__(/*! ./language */ "./resources/js/app/language.js");
+__webpack_require__(/*! ./view_basket_form */ "./resources/js/app/view_basket_form.js");
+__webpack_require__(/*! ./scroll */ "./resources/js/app/scroll.js");
 
 /***/ }),
 
-/***/ "./resources/js/basket_form.js":
-/*!*************************************!*\
-  !*** ./resources/js/basket_form.js ***!
-  \*************************************/
+/***/ "./resources/js/app/basket_form.js":
+/*!*****************************************!*\
+  !*** ./resources/js/app/basket_form.js ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 var _require = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js"),
@@ -5360,10 +5360,10 @@ function viewOrderSucces() {
 
 /***/ }),
 
-/***/ "./resources/js/basket_up.js":
-/*!***********************************!*\
-  !*** ./resources/js/basket_up.js ***!
-  \***********************************/
+/***/ "./resources/js/app/basket_up.js":
+/*!***************************************!*\
+  !*** ./resources/js/app/basket_up.js ***!
+  \***************************************/
 /***/ (() => {
 
 // const { constant } = require("lodash");
@@ -5415,10 +5415,10 @@ if (mini_basket) {
 
 /***/ }),
 
-/***/ "./resources/js/bootstrap.js":
-/*!***********************************!*\
-  !*** ./resources/js/bootstrap.js ***!
-  \***********************************/
+/***/ "./resources/js/app/bootstrap.js":
+/*!***************************************!*\
+  !*** ./resources/js/app/bootstrap.js ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5462,10 +5462,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/burger.js":
-/*!********************************!*\
-  !*** ./resources/js/burger.js ***!
-  \********************************/
+/***/ "./resources/js/app/burger.js":
+/*!************************************!*\
+  !*** ./resources/js/app/burger.js ***!
+  \************************************/
 /***/ (() => {
 
 var min_width = 1000;
@@ -5537,10 +5537,10 @@ if (linkMenu) {
 
 /***/ }),
 
-/***/ "./resources/js/fetch.js":
-/*!*******************************!*\
-  !*** ./resources/js/fetch.js ***!
-  \*******************************/
+/***/ "./resources/js/app/fetch.js":
+/*!***********************************!*\
+  !*** ./resources/js/app/fetch.js ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -5772,10 +5772,10 @@ function sendVieuMenu_GET(id) {
 
 /***/ }),
 
-/***/ "./resources/js/language.js":
-/*!**********************************!*\
-  !*** ./resources/js/language.js ***!
-  \**********************************/
+/***/ "./resources/js/app/language.js":
+/*!**************************************!*\
+  !*** ./resources/js/app/language.js ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -5828,10 +5828,10 @@ function _send_GET() {
 
 /***/ }),
 
-/***/ "./resources/js/scroll.js":
-/*!********************************!*\
-  !*** ./resources/js/scroll.js ***!
-  \********************************/
+/***/ "./resources/js/app/scroll.js":
+/*!************************************!*\
+  !*** ./resources/js/app/scroll.js ***!
+  \************************************/
 /***/ (() => {
 
 // // Убираем автоматический скроллинг браузера
@@ -5866,15 +5866,19 @@ function _send_GET() {
 //         }
 //     });
 // });
-if (window.location.hash) {
-  console.log('hash');
-  document.body.classList.remove('prevent-scroll');
-  document.body.style.overflow = "auto"; // Включаем прокрутку
-}
 
+// if (window.my_hash) {
+//     console.log(window.my_hash);
+// }
 window.onload = function () {
   console.log("window.onload");
+  if (window.my_hash) {
+    document.querySelector(window.my_hash).scrollIntoView({
+      behavior: "smooth"
+    });
+  }
 };
+
 // if (window.location.hash) {
 //     // Сохраняем якорь
 //     const hash = window.location.hash;
@@ -5894,10 +5898,12 @@ window.onload = function () {
 //         }, 100); // Задержка, чтобы все ресурсы успели загрузиться
 //     }
 // }
-if ('scrollRestoration' in history) {
-  // history.scrollRestoration = 'manual';
-  console.log('первый');
-}
+
+// if ('scrollRestoration' in history) {
+//     // history.scrollRestoration = 'manual';
+//     console.log('первый');
+
+// }
 
 // document.body.classList.add('prevent-scroll');
 
@@ -5914,10 +5920,10 @@ if ('scrollRestoration' in history) {
 
 /***/ }),
 
-/***/ "./resources/js/swiper.js":
-/*!********************************!*\
-  !*** ./resources/js/swiper.js ***!
-  \********************************/
+/***/ "./resources/js/app/swiper.js":
+/*!************************************!*\
+  !*** ./resources/js/app/swiper.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -6001,10 +6007,10 @@ var swiper_promo = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.Swiper_p
 
 /***/ }),
 
-/***/ "./resources/js/view_basket_form.js":
-/*!******************************************!*\
-  !*** ./resources/js/view_basket_form.js ***!
-  \******************************************/
+/***/ "./resources/js/app/view_basket_form.js":
+/*!**********************************************!*\
+  !*** ./resources/js/app/view_basket_form.js ***!
+  \**********************************************/
 /***/ (() => {
 
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -39096,7 +39102,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/app-sass"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/app-sass"], () => (__webpack_require__("./resources/js/app/app.js")))
 /******/ 	__webpack_require__.O(undefined, ["css/app","css/app-sass"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/app-sass"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);

@@ -31,14 +31,17 @@
     //         }
     //     });
     // });
-if (window.location.hash) {
-    console.log('hash');
-    document.body.classList.remove('prevent-scroll');
-    document.body.style.overflow = "auto"; // Включаем прокрутку
-}
+
+// if (window.my_hash) {
+//     console.log(window.my_hash);
+// }
 window.onload = () => {
     console.log("window.onload");
+    if(window.my_hash){
+        document.querySelector(window.my_hash).scrollIntoView({ behavior: "smooth" });
+    }
 };
+
 // if (window.location.hash) {
 //     // Сохраняем якорь
 //     const hash = window.location.hash;
@@ -58,11 +61,12 @@ window.onload = () => {
 //         }, 100); // Задержка, чтобы все ресурсы успели загрузиться
 //     }
 // }
-if ('scrollRestoration' in history) {
-    // history.scrollRestoration = 'manual';
-    console.log('первый');
 
-}
+// if ('scrollRestoration' in history) {
+//     // history.scrollRestoration = 'manual';
+//     console.log('первый');
+
+// }
 
 // document.body.classList.add('prevent-scroll');
 
