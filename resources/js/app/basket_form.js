@@ -120,9 +120,9 @@ function listenClick(e){
         }
     }
 }
-if(basket_form_content){
+if(basket_form){
     wrapper.addEventListener('click', listenClick);
-    
+
     basket_form.addEventListener(
       "focus",
       function (e) {
@@ -165,12 +165,12 @@ function sendRequest_POST(route, data) {
         .catch((error => {
             console.error('Fetch error:', error);
             basket_form_btn_container_error.classList.remove('display_none');
-        }));   
+        }));
 };
 function viewOrderSucces(){
     const basket_form_popup = document.querySelector('#basket_form_popup');
     const succes_order_basket = document.querySelector('#succes_order_basket');
     basket_form_popup.classList.add('display_none');
     succes_order_basket.classList.remove('display_none');
-    
+
 }

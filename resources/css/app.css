@@ -15,10 +15,12 @@ h1, h2{
 i{
     pointer-events: none;
 }
-html,
-/* .prevent-scroll{
-    overflow: hidden;
-} */
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+}
 body {
     /* overflow: hidden; */
     scroll-behavior: smooth;
@@ -40,7 +42,7 @@ body {
     flex-direction: column;
 }
 .main{
-    min-height: 50vh;
+    flex: 1;
 }
 /*-------------------------------------------------------------------header--------------------------------------------------------------------------------------------------------------------------*/
 .header{
@@ -143,9 +145,6 @@ body {
     border: solid 2px var(--third_color);
     color: var(--fourth_color);
     /* color: var(--third_color); */
-}
-.button.basket:hover{
-
 }
 .block{
     position: fixed;

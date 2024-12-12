@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="{{ asset('css/adminca.css')}}">
     <title>@yield('title')</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
         </div>
     </main>
 </body>
-<style>
+{{-- <style>
     *{
         margin: 0;
         padding: 0;
@@ -103,8 +104,25 @@
     .active{
         display: block;
     }
-</style>
+</style> --}}
 <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const detailButtons = document.querySelectorAll("#btn_details");
+
+        detailButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const detailsId = button.getAttribute("data-name");
+                const detailsDiv = document.getElementById(`details_${detailsId}`);
+                if (detailsDiv.style.display === "block") {
+                    detailsDiv.style.display = "none";
+                } else {
+                    detailsDiv.style.display = "block";
+                }
+            });
+        });
+    });
+</script>
+{{-- <script>
   wrapper_product = document.querySelector('#wrapper_product');
   async function viewPopup(e){
     if(e.target.id == 'btn_details'){
@@ -115,5 +133,5 @@
 }
 if(wrapper_product){
     wrapper_product.addEventListener('click', viewPopup);
-}
+} --}}
 </script>

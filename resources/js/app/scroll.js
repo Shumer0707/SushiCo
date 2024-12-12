@@ -36,11 +36,12 @@
 //     console.log(window.my_hash);
 // }
 window.onload = () => {
-    console.log("window.onload");
+    // console.log("window.onload");
     if(window.my_hash){
         document.querySelector(window.my_hash).scrollIntoView({ behavior: "smooth" });
     }
 };
+
 
 // if (window.location.hash) {
 //     // Сохраняем якорь

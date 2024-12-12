@@ -10,7 +10,7 @@
     /* right: 0; */
     z-index: 12;
     transition: all 0.5s ease;
-    
+
 }
 /* .Catalog_h2{
     padding: 1vh;
@@ -35,10 +35,12 @@
 }
 .mini_basket_catalog_wrapper{
     display: block;
-    min-height: 93vh; 
+    min-height: 93vh;
 }
 .mini_basket_catalog_container{
+    overflow: auto;
     min-height: 83vh;
+    max-height: 83vh;
     padding-top: 5%;
 }
 .mini_basket_catalog{

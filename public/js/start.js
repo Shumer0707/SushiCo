@@ -8,13 +8,22 @@
 /***/ (() => {
 
 window.my_hash = null;
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.hash) {
-    window.my_hash = window.location.hash;
-    window.history.replaceState(null, null, " ");
-    window.scrollTo(0, 0);
-  }
-});
+// history.replaceState(null, null, " ");
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     if (window.location.hash) {
+//         // window.my_hash = window.location.hash;
+//         window.history.replaceState(null, null, " ");
+//         window.scrollTo(0, 0);
+//     }
+// });
+
+if (window.location.hash) {
+  window.my_hash = window.location.hash;
+  window.history.replaceState(null, null, " ");
+  window.scrollTo(0, 0);
+  console.log(window.my_hash);
+}
 
 /***/ })
 
@@ -45,8 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /******/ 	}
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
 /*!*************************************!*\
   !*** ./resources/js/start/start.js ***!

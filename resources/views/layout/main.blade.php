@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
-    <script async src="/js/start.js"></script>
+    <script src="/js/start.js"></script>
 </head>
 <body class="">
     <div class="wrapper" id="wrapper">

@@ -16,6 +16,18 @@
             <div class="swiper-slide item_promo">
                 <img src="\img\for-fluter\header-3.jpg" alt="3">
             </div>
+            <div class="swiper-slide item_promo">
+                <img src="\img\for-fluter\header-4.jpg" alt="4">
+            </div>
+            {{-- <div class="swiper-slide item_promo">
+                <img src="\img\for-fluter\header-6.jpg" alt="5">
+            </div>
+            <div class="swiper-slide item_promo">
+                <img src="\img\for-fluter\header-7.jpg" alt="5">
+            </div>
+            <div class="swiper-slide item_promo">
+                <img src="\img\for-fluter\header-8.jpg" alt="5">
+            </div> --}}
         </div>
     </div>
 </div>
@@ -41,7 +53,7 @@
                         @if(app()->getLocale() == 'ru')
                             <p>{{$el->description_ru}}</p>
                         @elseif(app()->getLocale() == 'ro')
-                            <p>{{$el->description_ro}}</p>   
+                            <p>{{$el->description_ro}}</p>
                         @endif
                     </div>
                     <div class="Catalog_Niz">

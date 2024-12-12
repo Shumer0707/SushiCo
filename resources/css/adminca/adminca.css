@@ -1,0 +1,245 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc; /* Светло-голубой фон */
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+header {
+    background-color: #f0f4f8;
+    padding: 10px 20px;
+    border-bottom: 2px solid #b3c7e6;
+}
+
+.header_product {
+    display: flex;
+    gap: 15px;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+}
+
+.wrapper_product,
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #b3c7e6;
+    border-radius: 10px;
+    background-color: #f7f9fc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+li {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Кнопки */
+.btn_product {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+.btn_product.home {
+    background-color: #4caf50;
+}
+
+.btn_product.add {
+    background-color: #2196f3;
+}
+
+.btn_product.update {
+    background-color: #ff9800;
+}
+
+.btn_product.delete {
+    background-color: #e53935;
+}
+
+.btn_product:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Каталог */
+.container_product_index {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9fb;
+    padding: 10px 15px;
+    border: 1px solid #b3c7e6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container_product_index:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.title_product {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+#btn_details {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #2196f3;
+    transition: color 0.3s ease;
+}
+
+#btn_details:hover {
+    color: #1565c0;
+}
+
+/* Детали продукта */
+.container_product_datails {
+    display: none;
+    margin-top: 15px;
+    padding: 15px 20px;
+    border: 2px solid #b3c7e6;
+    border-radius: 10px;
+    background-color: #f7f9fc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.container_product_datails li {
+    font-size: 15px;
+    color: #444;
+    margin: 8px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.container_product_datails li:last-child {
+    border-bottom: none;
+}
+
+.container_product_datails img {
+    margin-top: 15px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #b3c7e6;
+}
+
+/* Форма */
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form input[type="file"] {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form input[type="file"]:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin: 10px 0 5px;
+}
+
+form .dropdown {
+    margin: 15px 0;
+}
+
+form .dropdown span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+form .dropdown ul {
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+form .dropdown ul li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+form .dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+form .dropdown ul li input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}

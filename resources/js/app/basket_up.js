@@ -8,7 +8,7 @@ const mini_basket_batton_close = document.querySelector(".mini_basket_batton_clo
 if(backToTop){
     // document.addEventListener("DOMContentLoaded", function () {
         // console.log("DOMContentLoaded");
-        
+
         window.addEventListener("scroll", function () {
             // var scroll = window.scrollY;
             if (window.scrollY > 150) {
@@ -35,14 +35,15 @@ if(mini_basket){
     for (let i = 0; i < array.length; i++) {
         // const i = array[i];
         array[i].addEventListener("click", function (){
+            document.body.classList.toggle('_lock');
             mini_basket.classList.toggle('_active_right');
             backToTop.classList.toggle('_active_right_button');
             mini_basket_batton.classList.toggle('_active_right_button');
             mini_basket_plug.classList.toggle('_active_right');
             mini_basket_batton_close.classList.toggle('_active_right_button');
         });
-        
+
     }
-    
+
 }
 
